@@ -1,4 +1,4 @@
-#:kivy 1.11.1
+#:kivy 2.0.0
 
 <MenuScreen>:
     canvas.before:
@@ -10,36 +10,48 @@
     
     Label:
         text: "Bienvenido"
+        font_size: 50
         color: 0,0,0,1
-        pos_hint: {"x":.45, "y":0.80} 
-        size_hint: (.2, .2)
+        pos_hint: {"x":.42, "y":0.80}
+        size_hint: 0.20, 0.20
+        height: 100
+        anchor_x:'center'
+        anchor_y:'top'
         
-    ImageButton:
+    MainButtons:
         source: "icon_1.png"
-        size_hint_y: 0.25
-        size_hint_x: 0.25
-        pos_hint: {"x": .10, "y": 0.30} 
+        size_hint_y: 0.30
+        size_hint_x: 0.30
+        anchor_x:'center'
+        anchor_y:'center'
+        pos_hint: {"x": -0.05, "y": 0.15} 
         on_press: root.manager.current = 'entry'
 
-    ImageButton:
+    MainButtons:
         source: "icon_2.png"
-        size_hint_y: 0.25
-        size_hint_x: 0.25
-        pos_hint: {"x": 0.30, "y": 0.30}
+        size_hint_y: 0.30
+        size_hint_x: 0.30
+        anchor_x:'center'
+        anchor_y:'center'
+        pos_hint: {"x": 0.23, "y": 0.15}
         on_press: root.manager.current = 'appointments'
 
-    ImageButton:
+    MainButtons:
         source: "icon_3.png"
-        size_hint_y: 0.25
-        size_hint_x: 0.25
-        pos_hint: {"x": 0.50, "y": 0.30}
+        size_hint_y: 0.30
+        size_hint_x: 0.30
+        anchor_x:'center'
+        anchor_y:'center'
+        pos_hint: {"x": 0.47, "y": 0.15}
         on_press: root.manager.current = 'survey'
 
-    ImageButton:
+    MainButtons:
         source: "icon_4.png"
-        size_hint_y: 0.25
-        size_hint_x: 0.25
-        pos_hint: {"x": 0.70, "y": 0.30}
+        size_hint_y: 0.30
+        size_hint_x: 0.30
+        anchor_x:'center'
+        anchor_y:'center'
+        pos_hint: {"x": 0.75, "y": 0.15}
         on_press: root.manager.current = 'info'
 
 
@@ -53,10 +65,13 @@
     
     Label:
         text: "Entry Form"
+        font_size: 50
         color: 0,0,0,1
-        pos_hint: {"x":.45, "y":0.80} 
-        size_hint: (.20, .20)
-        valign: 'middle'
+        pos_hint: {"x":.42, "y":0.80}
+        size_hint: 0.20, 0.20
+        height: 100
+        anchor_x:'center'
+        anchor_y:'top'
     
     Button:
         text:'Back'
@@ -75,10 +90,20 @@
     
     Label:
         text: "Appointments"
+        font_size: 50
         color: 0,0,0,1
-        pos_hint: {"x":.45, "y":0.80} 
-        size_hint: (.20, .20)
-        valign: 'middle'
+        pos_hint: {"x":.42, "y":0.80}
+        size_hint: 0.20, 0.20
+        height: 100
+        anchor_x:'center'
+        anchor_y:'top'
+    
+    Button:
+        text:'Back'
+        size_hint_y: 0.05
+        size_hint_x: 0.05
+        pos_hint: {"x": 0, "y": 0}
+        on_press: root.manager.current = 'menu'
 
 <Survey>:
     canvas.before:
@@ -90,9 +115,20 @@
     
     Label:
         text: "Survey"
+        font_size: 50
         color: 0,0,0,1
-        pos_hint: {"x":.45, "y":0.80} 
-        size_hint: (.20, .20)
+        pos_hint: {"x":.42, "y":0.80}
+        size_hint: 0.20, 0.20
+        height: 100
+        anchor_x:'center'
+        anchor_y:'top'
+    
+    Button:
+        text:'Back'
+        size_hint_y: 0.05
+        size_hint_x: 0.05
+        pos_hint: {"x": 0, "y": 0}
+        on_press: root.manager.current = 'menu'
 
 <Info>:
     canvas.before:
@@ -104,9 +140,13 @@
     
     Label:
         text: "Info"
+        font_size: 50
         color: 0,0,0,1
-        pos_hint: {"x":.45, "y":0.80} 
-        size_hint: (.20, .20)
+        pos_hint: {"x":.42, "y":0.80}
+        size_hint: 0.20, 0.20
+        height: 100
+        anchor_x:'center'
+        anchor_y:'top'
     
     Button:
         text:'Back'

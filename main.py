@@ -1,7 +1,11 @@
 import kivy
-from screens import *
+kivy.require('2.0.0')
 
-kivy.require('1.11.1')
+from screens import MenuScreen
+from screens import EntryForm
+from screens import Appointments
+from screens import Survey
+from screens import Info
 
 from kivy.app import App
 from kivy.lang import Builder
@@ -10,9 +14,6 @@ from kivy.uix.screenmanager import ScreenManager
 from kivy.uix.widget import Widget
 from kivy.uix.button import ButtonBehavior
 from kivy.uix.image import Image
-
-
-
 
 class MainApp(App):
     '''Contains the main app and the tittle of the app'''
@@ -28,13 +29,11 @@ class MainApp(App):
 
         return sm
 
-class ImageButton(ButtonBehavior, Image):
+class MainButtons(ButtonBehavior, Image):
     '''Class that makes it possible to have an Image that works like a Button'''
-    
     def test_button(self, i): 
         '''Button test function'''
         print(f"Pressed Button {i}") 
-
 
 
 if __name__ == "__main__":
