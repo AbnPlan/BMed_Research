@@ -14,6 +14,7 @@ from kivy.uix.screenmanager import ScreenManager
 from kivy.uix.widget import Widget
 from kivy.uix.button import ButtonBehavior
 from kivy.uix.image import Image
+from kivy.uix.textinput import TextInput
 
 class MainApp(App):
     '''Contains the main app and the tittle of the app'''
@@ -39,4 +40,5 @@ class MainButtons(ButtonBehavior, Image):
 if __name__ == "__main__":
     Builder.load_file('main.kv')
     Window.size = (1024, 600)
+    Window.borderless = True
     MainApp().run()

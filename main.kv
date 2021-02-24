@@ -24,7 +24,7 @@
         size_hint_x: 0.30
         anchor_x:'center'
         anchor_y:'center'
-        pos_hint: {"x": -0.05, "y": 0.15} 
+        pos_hint: {"x": -0.02, "y": 0.23} 
         on_press: root.manager.current = 'entry'
 
     MainButtons:
@@ -33,7 +33,7 @@
         size_hint_x: 0.30
         anchor_x:'center'
         anchor_y:'center'
-        pos_hint: {"x": 0.23, "y": 0.15}
+        pos_hint: {"x": 0.23, "y": 0.23}
         on_press: root.manager.current = 'appointments'
 
     MainButtons:
@@ -42,7 +42,7 @@
         size_hint_x: 0.30
         anchor_x:'center'
         anchor_y:'center'
-        pos_hint: {"x": 0.47, "y": 0.15}
+        pos_hint: {"x": 0.47, "y": 0.23}
         on_press: root.manager.current = 'survey'
 
     MainButtons:
@@ -51,7 +51,7 @@
         size_hint_x: 0.30
         anchor_x:'center'
         anchor_y:'center'
-        pos_hint: {"x": 0.75, "y": 0.15}
+        pos_hint: {"x": 0.71, "y": 0.23}
         on_press: root.manager.current = 'info'
 
 
@@ -79,6 +79,11 @@
         size_hint_x: 0.05
         pos_hint: {"x": 0, "y": 0}
         on_press: root.manager.current = 'menu'
+
+    TextInput:
+        size_hint: (.25, .05)
+        multiline: False
+
 
 <Appointments>:
     canvas.before:
