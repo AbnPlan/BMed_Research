@@ -1,161 +1,259 @@
 #:kivy 2.0.0
 
-<MenuScreen>:
+<MyScreenManager>:
     canvas.before:
         Color:
             rgba: 1, 1, 1, 1
         Rectangle:
             pos: self.pos
             size: self.size
-    
-    Label:
-        text: "Bienvenido"
-        font_size: 50
-        color: 0,0,0,1
-        pos_hint: {"x":.42, "y":0.80}
-        size_hint: 0.20, 0.20
-        height: 100
-        anchor_x:'center'
-        anchor_y:'top'
-        
-    MainButtons:
-        source: "icon_1.png"
-        size_hint_y: 0.30
-        size_hint_x: 0.30
-        anchor_x:'center'
-        anchor_y:'center'
-        pos_hint: {"x": -0.02, "y": 0.23} 
-        on_press: root.manager.current = 'entry'
+    MenuScreen:
+        name:'menu'
+    EntryForm:
+        name:'entry'
+    Appointments:
+        name:'appointments'
+    Survey:
+        name:'survey'
+    Info:
+        name:'info'
 
-    MainButtons:
-        source: "icon_2.png"
-        size_hint_y: 0.30
-        size_hint_x: 0.30
-        anchor_x:'center'
-        anchor_y:'center'
-        pos_hint: {"x": 0.23, "y": 0.23}
-        on_press: root.manager.current = 'appointments'
+<MenuScreen>:
+    FloatLayout:
+        Label:
+            text: "Bienvenido"
+            font_size: 70
+            color: 0,0,0,1
+            pos_hint: {"x":.42, "y":0.75}
+            size_hint: 0.20, 0.20
+            height: 100
 
-    MainButtons:
-        source: "icon_3.png"
-        size_hint_y: 0.30
-        size_hint_x: 0.30
-        anchor_x:'center'
-        anchor_y:'center'
-        pos_hint: {"x": 0.47, "y": 0.23}
-        on_press: root.manager.current = 'survey'
+        Image:
+            source: 'Logo.jpeg'
+            pos_hint: {"x":.04, "y":0.75}
+            size_hint: 0.20, 0.20
 
-    MainButtons:
-        source: "icon_4.png"
-        size_hint_y: 0.30
-        size_hint_x: 0.30
-        anchor_x:'center'
-        anchor_y:'center'
-        pos_hint: {"x": 0.71, "y": 0.23}
-        on_press: root.manager.current = 'info'
+            
+        PicButton:
+            source: "icon_1.png"
+            size_hint_y: 0.30
+            size_hint_x: 0.30
+            pos_hint: {"x": -0.02, "y": 0.23} 
+            on_press: root.manager.SMEntry()
+
+        PicButton:
+            source: "icon_2.png"
+            size_hint_y: 0.30
+            size_hint_x: 0.30
+
+            pos_hint: {"x": 0.23, "y": 0.23}
+            on_press: root.manager.SMAppointments()
+
+        PicButton:
+            source: "icon_3.png"
+            size_hint_y: 0.30
+            size_hint_x: 0.30
+            pos_hint: {"x": 0.47, "y": 0.23}
+            on_press: root.manager.SMsurvey()
+
+        PicButton:
+            source: "icon_4.png"
+            size_hint_y: 0.30
+            size_hint_x: 0.30
+            pos_hint: {"x": 0.71, "y": 0.23}
+            on_press: root.manager.SMInfo()
+
+        Button:
+            text: 'EXIT'
+            size_hint_y: 0.05
+            size_hint_x: 0.05
+            pos_hint: {"x": 0, "y": 0.95}
+            on_press : app.stop()
 
 
 <EntryForm>:
-    canvas.before:
-        Color:
-            rgba: 1, 1, 1, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
-    
-    Label:
-        text: "Entry Form"
-        font_size: 50
-        color: 0,0,0,1
-        pos_hint: {"x":.42, "y":0.80}
-        size_hint: 0.20, 0.20
-        height: 100
-        anchor_x:'center'
-        anchor_y:'top'
-    
-    Button:
-        text:'Back'
-        size_hint_y: 0.05
-        size_hint_x: 0.05
-        pos_hint: {"x": 0, "y": 0}
-        on_press: root.manager.current = 'menu'
+    id: EntryForm
+    on_leave: self.clear_text()
 
-    TextInput:
-        size_hint: (.25, .05)
-        multiline: False
+    FloatLayout:
+        Label:
+            text: "Entry Form"
+            font_size: 50
+            color: 0,0,0,1
+            pos_hint: {"x":.42, "y":0.80}
+            size_hint: 0.20, 0.20
+            height: 100
+        
+        PicButton:
+            source: "red-go-back-arrow.png"
+            size_hint_y: 0.05
+            size_hint_x: 0.05
+            pos_hint: {"x": -0.01, "y": 0.005}
+            on_press: root.manager.SMMainScreen()
+
+        Button:
+            id: submit_form
+            text: 'Submit'
+            size_hint: (0.10, 0.10)
+            pos_hint: {"x": 0.45, "y": 0.005}
+            on_press: 
+                EntryForm.save_form()
+                root.manager.SMMainScreen()
+
+        Label:
+            text: 'Nombre:'
+            pos_hint: {"x": -0.08, "y": 0.78}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Telefono:'
+            pos_hint: {"x": -0.08, "y": 0.70}
+            size_hint: (.25, .05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Dirección:'
+            pos_hint: {"x": -0.08, "y": 0.63}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Linea 1:'
+            pos_hint: {"x": -0.08, "y": 0.58}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Linea 2:'
+            pos_hint: {"x": -0.08, "y": 0.50}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Pueblo:'
+            pos_hint: {"x": -0.08, "y": 0.42}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Pais:'
+            pos_hint: {"x": 0.105, "y": 0.42}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Zip:'
+            pos_hint: {"x": -0.08, "y": 0.34}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        TextInput:
+            id: full_name
+            hint_text: 'Nombre: '
+            size_hint: (0.25, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.78}
+            multiline: False
+
+        TextInput:
+            id: phone_number
+            hint_text: 'Telefono: '
+            size_hint: (0.25, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.70}
+            multiline: False
+
+        TextInput:
+            id: address_line1
+            hint_text: 'Linea 1 '
+            size_hint: (0.25, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.58}
+            multiline: False
+
+        TextInput:
+            id: address_line2
+            hint_text: 'Linea 2'
+            size_hint: (.25, .05)
+            pos_hint: {"x": .10, "y": 0.50}
+            multiline: False
+
+        TextInput:
+            id: town
+            hint_text: 'Pueblo'
+            size_hint: (0.12, 0.05)
+            pos_hint: {"x": 0.08, "y": 0.42}
+            multiline: False
+
+        TextInput:
+            id: country
+            text: 'Puerto Rico'
+            hint_text: 'Pais'
+            size_hint: (0.10, 0.05)
+            pos_hint: {"x": .25, "y": 0.42}
+            multiline: False
+
+        TextInput:
+            id: zip_code
+            hint_text: 'Zip:'
+            size_hint: (0.10, 0.05)
+            pos_hint: {"x": 0.06, "y": 0.34}
+            multiline: False
 
 
 <Appointments>:
-    canvas.before:
-        Color:
-            rgba: 1, 1, 1, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
-    
-    Label:
-        text: "Appointments"
-        font_size: 50
-        color: 0,0,0,1
-        pos_hint: {"x":.42, "y":0.80}
-        size_hint: 0.20, 0.20
-        height: 100
-        anchor_x:'center'
-        anchor_y:'top'
-    
-    Button:
-        text:'Back'
-        size_hint_y: 0.05
-        size_hint_x: 0.05
-        pos_hint: {"x": 0, "y": 0}
-        on_press: root.manager.current = 'menu'
+    FloatLayout:
+        Label:
+            text: "Appointments"
+            font_size: 50
+            color: 0,0,0,1
+            pos_hint: {"x":.42, "y":0.80}
+            size_hint: 0.20, 0.20
+            height: 100
+        
+        PicButton:
+            source: "red-go-back-arrow.png"
+            size_hint_y: 0.05
+            size_hint_x: 0.05
+            pos_hint: {"x": -0.01, "y": 0.005}
+            on_press: root.manager.SMMainScreen()
 
 <Survey>:
-    canvas.before:
-        Color:
-            rgba: 1, 1, 1, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
-    
-    Label:
-        text: "Survey"
-        font_size: 50
-        color: 0,0,0,1
-        pos_hint: {"x":.42, "y":0.80}
-        size_hint: 0.20, 0.20
-        height: 100
-        anchor_x:'center'
-        anchor_y:'top'
-    
-    Button:
-        text:'Back'
-        size_hint_y: 0.05
-        size_hint_x: 0.05
-        pos_hint: {"x": 0, "y": 0}
-        on_press: root.manager.current = 'menu'
+    FloatLayout:
+        Label:
+            text: "Survey"
+            font_size: 50
+            color: 0,0,0,1
+            pos_hint: {"x":.42, "y":0.80}
+            size_hint: 0.20, 0.20
+            height: 100
+        
+        PicButton:
+            source: "red-go-back-arrow.png"
+            size_hint_y: 0.05
+            size_hint_x: 0.05
+            pos_hint: {"x": -0.01, "y": 0.005}
+            on_press: root.manager.SMMainScreen()
 
 <Info>:
-    canvas.before:
-        Color:
-            rgba: 1, 1, 1, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
-    
-    Label:
-        text: "Info"
-        font_size: 50
-        color: 0,0,0,1
-        pos_hint: {"x":.42, "y":0.80}
-        size_hint: 0.20, 0.20
-        height: 100
-        anchor_x:'center'
-        anchor_y:'top'
-    
-    Button:
-        text:'Back'
-        size_hint_y: 0.05
-        size_hint_x: 0.05
-        pos_hint: {"x": 0, "y": 0}
-        on_press: root.manager.current = 'menu'
+    FloatLayout:
+        Label:
+            text: "Info"
+            font_size: 50
+            color: 0,0,0,1
+            pos_hint: {"x":.42, "y":0.80}
+            size_hint: 0.20, 0.20
+            height: 100
+        
+        PicButton:
+            source: "red-go-back-arrow.png"
+            size_hint_y: 0.05
+            size_hint_x: 0.05
+            pos_hint: {"x": -0.01, "y": 0.005}
+            on_press: root.manager.SMMainScreen()
