@@ -1,4 +1,4 @@
-import csv
+import db_manager as db
 
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.anchorlayout import AnchorLayout
@@ -48,21 +48,21 @@ class EntryForm(Screen):
         self.ids.address_line2.text = ''
         self.ids.town.text = ''
         self.ids.country.text = 'Puerto Rico'
+        self.ids.zip_code.text = ''
 
     def save_form(self):
-        '''Save form'''
-        patient_data = open('DataEntry.csv', 'a')
-        patient_data.write(
-            f'{self.ids.full_name.text},'+
-            f'{self.ids.phone_number.text},'+
-            f'{self.ids.address_line1.text},'+
-            f'{self.ids.address_line2.text},'+
-            f'{self.ids.town.text},'+
-            f'{self.ids.country.text},'+
-            f'{self.ids.zip_code.text}\n'
-            )
-        self.clear_text()
-        patient_data.close()
+        '''Save form into Database'''
+        db_connection = db.db_connection()
+        db.insert_data(
+            db_connection, 
+            self.ids.full_name.text,
+            self.ids.phone_number.text,
+            self.ids.address_line1.text,
+            self.ids.address_line2.text,
+            self.ids.town.text,
+            self.ids.country.text,
+            self.ids.zip_code.text
+        )
 
 class Appointments(Screen):
     '''Appointments screen'''

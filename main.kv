@@ -29,20 +29,20 @@
             height: 100
 
         Image:
-            source: 'Logo.jpeg'
+            source: 'ICONS\Logo.jpeg'
             pos_hint: {"x":.04, "y":0.75}
             size_hint: 0.20, 0.20
 
             
         PicButton:
-            source: "icon_1.png"
+            source: "ICONS\icon_1.png"
             size_hint_y: 0.30
             size_hint_x: 0.30
             pos_hint: {"x": -0.02, "y": 0.23} 
             on_press: root.manager.SMEntry()
 
         PicButton:
-            source: "icon_2.png"
+            source: "ICONS\icon_2.png"
             size_hint_y: 0.30
             size_hint_x: 0.30
 
@@ -50,14 +50,14 @@
             on_press: root.manager.SMAppointments()
 
         PicButton:
-            source: "icon_3.png"
+            source: "ICONS\icon_3.png"
             size_hint_y: 0.30
             size_hint_x: 0.30
             pos_hint: {"x": 0.47, "y": 0.23}
             on_press: root.manager.SMsurvey()
 
         PicButton:
-            source: "icon_4.png"
+            source: "ICONS\icon_4.png"
             size_hint_y: 0.30
             size_hint_x: 0.30
             pos_hint: {"x": 0.71, "y": 0.23}
@@ -85,7 +85,7 @@
             height: 100
         
         PicButton:
-            source: "red-go-back-arrow.png"
+            source: "ICONS\go_back.png"
             size_hint_y: 0.05
             size_hint_x: 0.05
             pos_hint: {"x": -0.01, "y": 0.005}
@@ -102,14 +102,14 @@
 
         Label:
             text: 'Nombre:'
-            pos_hint: {"x": -0.08, "y": 0.78}
+            pos_hint: {"x": -0.075, "y": 0.78}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
 
         Label:
             text: 'Telefono:'
-            pos_hint: {"x": -0.08, "y": 0.70}
+            pos_hint: {"x": -0.077, "y": 0.70}
             size_hint: (.25, .05)
             font_size: 15
             color: 0,0,0,1
@@ -151,28 +151,29 @@
 
         Label:
             text: 'Zip:'
-            pos_hint: {"x": -0.08, "y": 0.34}
+            pos_hint: {"x": -0.068, "y": 0.34}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
 
         TextInput:
             id: full_name
-            hint_text: 'Nombre: '
+            hint_text: 'Nombre'
             size_hint: (0.25, 0.05)
             pos_hint: {"x": 0.10, "y": 0.78}
             multiline: False
+            on_focus: request_keyboard()
 
         TextInput:
             id: phone_number
-            hint_text: 'Telefono: '
+            hint_text: 'Telefono'
             size_hint: (0.25, 0.05)
             pos_hint: {"x": 0.10, "y": 0.70}
             multiline: False
 
         TextInput:
             id: address_line1
-            hint_text: 'Linea 1 '
+            hint_text: 'Linea 1'
             size_hint: (0.25, 0.05)
             pos_hint: {"x": 0.10, "y": 0.58}
             multiline: False
@@ -201,11 +202,14 @@
 
         TextInput:
             id: zip_code
-            hint_text: 'Zip:'
+            hint_text: 'Zip'
             size_hint: (0.10, 0.05)
-            pos_hint: {"x": 0.06, "y": 0.34}
+            pos_hint: {"x": 0.08, "y": 0.34}
             multiline: False
 
+        CheckBox:
+            id: box1
+            
 
 <Appointments>:
     FloatLayout:
@@ -218,7 +222,7 @@
             height: 100
         
         PicButton:
-            source: "red-go-back-arrow.png"
+            source: "ICONS\go_back.png"
             size_hint_y: 0.05
             size_hint_x: 0.05
             pos_hint: {"x": -0.01, "y": 0.005}
@@ -235,7 +239,7 @@
             height: 100
         
         PicButton:
-            source: "red-go-back-arrow.png"
+            source: "ICONS\go_back.png"
             size_hint_y: 0.05
             size_hint_x: 0.05
             pos_hint: {"x": -0.01, "y": 0.005}
@@ -252,7 +256,7 @@
             height: 100
         
         PicButton:
-            source: "red-go-back-arrow.png"
+            source: "ICONS\go_back.png"
             size_hint_y: 0.05
             size_hint_x: 0.05
             pos_hint: {"x": -0.01, "y": 0.005}
