@@ -4,6 +4,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.button import ButtonBehavior
 from kivy.uix.image import Image
+from kivy.properties import ObjectProperty
 
 class MyScreenManager(ScreenManager):
     def __init__(self, **kwargs):
@@ -49,6 +50,7 @@ class EntryForm(Screen):
         self.ids.town.text = ''
         self.ids.country.text = 'Puerto Rico'
         self.ids.zip_code.text = ''
+        self.ids.health_insurance.text = ''
 
     def save_form(self):
         '''Save form into Database'''
@@ -61,11 +63,16 @@ class EntryForm(Screen):
             self.ids.address_line2.text,
             self.ids.town.text,
             self.ids.country.text,
-            self.ids.zip_code.text
+            self.ids.zip_code.text,
+            self.ids.health_insurance.text
+
         )
 
+        db_connection.close()
+
+
 class Appointments(Screen):
-    '''Appointments screen'''
+    '''APPOINTMENTS SCREEN'''
     pass
 
 class Survey(Screen):
