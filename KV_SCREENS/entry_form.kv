@@ -1,0 +1,361 @@
+#:kivy 2.0.0
+
+<EntryForm@FormLayout>:
+    id: EntryForm
+    on_leave: self.clear_text()
+
+    FloatLayout:
+        Label:
+            text: "Entry Form"
+            font_size: 50
+            color: 0,0,0,1
+            pos_hint: {"x":.42, "y":0.80}
+            size_hint: 0.20, 0.20
+            height: 100
+        
+        PicButton:
+            source: "ICONS/go_back.png"
+            size_hint_y: 0.05
+            size_hint_x: 0.05
+            pos_hint: {"x": -0.01, "y": 0.005}
+            on_press: root.manager.SMMainScreen()
+
+        Button:
+            id: submit_form
+            text: 'Submit'
+            size_hint: (0.10, 0.10)
+            pos_hint: {"x": 0.45, "y": 0.005}
+            on_press: 
+                EntryForm.save_form()
+                root.manager.SMMainScreen()
+
+        Label:
+            text: 'Nombre:'
+            pos_hint: {"x": -0.075, "y": 0.78}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Telefono:'
+            pos_hint: {"x": -0.077, "y": 0.70}
+            size_hint: (.25, .05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Dirección:'
+            pos_hint: {"x": -0.08, "y": 0.63}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Linea 1:'
+            pos_hint: {"x": -0.08, "y": 0.58}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Linea 2:'
+            pos_hint: {"x": -0.08, "y": 0.50}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Pueblo:'
+            pos_hint: {"x": -0.08, "y": 0.42}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Pais:'
+            pos_hint: {"x": 0.105, "y": 0.42}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Zip:'
+            pos_hint: {"x": -0.068, "y": 0.34}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        
+        Label:
+            text: 'Seguro Medico:'
+            pos_hint: {"x": -0.068, "y": 0.26}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        
+        Label:
+            text: 'Presenta algunos de estos sintomas?'
+            pos_hint: {"x": 0.50, "y": 0.755}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        
+        Label:
+            text: 'Si'
+            pos_hint: {"x": 0.70, "y": 0.755}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        
+        Label:
+            text: 'No'
+            pos_hint: {"x": 0.75, "y": 0.755}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Fiebre'
+            pos_hint: {"x": 0.50, "y": 0.70}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Tos'
+            pos_hint: {"x": 0.50, "y": 0.65}
+            size_hint: (.25, .05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Dificultad para respirar (falta de aire)'
+            pos_hint: {"x": 0.50, "y": 0.60}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Escalofríos continuos'
+            pos_hint: {"x": 0.50, "y": 0.55}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Temblores'
+            pos_hint: {"x": 0.50, "y": 0.50}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Dolor muscular'
+            pos_hint: {"x": 0.50, "y": 0.45}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Dolor de cabeza'
+            pos_hint: {"x": 0.50, "y": 0.40}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Dolor de garganta'
+            pos_hint: {"x": 0.50, "y": 0.35}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        Label:
+            text: 'Pérdida reciente del olfato o el gusto'
+            pos_hint: {"x": 0.50, "y": 0.30}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        TextInput:
+            id: full_name
+            hint_text: 'Nombre'
+            size_hint: (0.25, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.78}
+            multiline: False
+
+        TextInput:
+            id: phone_number
+            hint_text: 'Telefono'
+            size_hint: (0.25, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.70}
+            multiline: False
+
+        TextInput:
+            id: address_line1
+            hint_text: 'Linea 1'
+            size_hint: (0.25, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.58}
+            multiline: False
+
+        TextInput:
+            id: address_line2
+            hint_text: 'Linea 2'
+            size_hint: (.25, .05)
+            pos_hint: {"x": .10, "y": 0.50}
+            multiline: False
+
+        TextInput:
+            id: town
+            hint_text: 'Pueblo'
+            size_hint: (0.12, 0.05)
+            pos_hint: {"x": 0.08, "y": 0.42}
+            multiline: False
+
+        TextInput:
+            id: country
+            text: 'Puerto Rico'
+            hint_text: 'Pais'
+            size_hint: (0.10, 0.05)
+            pos_hint: {"x": .25, "y": 0.42}
+            multiline: False
+
+        TextInput:
+            id: zip_code
+            hint_text: 'Zip'
+            size_hint: (0.10, 0.05)
+            pos_hint: {"x": 0.08, "y": 0.34}
+            multiline: False
+        
+        TextInput:
+            id: health_insurance
+            hint_text: 'Seguro Medico'
+            size_hint: (0.20, 0.05)
+            pos_hint: {"x": 0.12, "y": 0.26}
+            multiline: False
+
+        CheckBox:
+            id: fiebre_yes
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.80, "y": 0.70}
+            group: 'fiebre'
+            color: 'black'
+        
+        CheckBox:
+            id: fiebre_no
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.85, "y": 0.70}
+            group: 'fiebre'
+            color: 'black'
+        
+        CheckBox:
+            id: tos_yes
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.80, "y": 0.65}
+            group: 'tos'
+            color: 'black'
+        
+        CheckBox:
+            id: tos_no
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.85, "y": 0.65}
+            group: 'tos'
+            color: 'black'
+        
+        CheckBox:
+            id: diff_resp_yes
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.80, "y": 0.60}
+            group: 'diff_resp'
+            color: 'black'
+        
+        CheckBox:
+            id: diff_resp_no
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.85, "y": 0.60}
+            group: 'diff_resp'
+            color: 'black'
+        
+        CheckBox:
+            id: escalofrios_yes
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.80, "y": 0.55}
+            group: 'escalofrios'
+            color: 'black'
+        
+        CheckBox:
+            id: escalofrios_no
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.85, "y": 0.55}
+            group: 'escalofrios'
+            color: 'black'
+        
+        CheckBox:
+            id: temblores_yes
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.80, "y": 0.50}
+            group: 'temblores'
+            color: 'black'
+        
+        CheckBox:
+            id: temblores_no
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.85, "y": 0.50}
+            group: 'temblores'
+            color: 'black'
+        
+        CheckBox:
+            id: dolor_muscular_yes
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.80, "y": 0.45}
+            group: 'dolor_muscular'
+            color: 'black'
+        
+        CheckBox:
+            id: dolor_muscular_no
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.85, "y": 0.45}
+            group: 'dolor_muscular'
+            color: 'black'
+        
+        CheckBox:
+            id: dolor_cabeza_yes
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.80, "y": 0.40}
+            group: 'dolor_cabeza'
+            color: 'black'
+        
+        CheckBox:
+            id: dolor_cabeza_no
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.85, "y": 0.40}
+            group: 'dolor_cabeza'
+            color: 'black'
+        
+        CheckBox:
+            id: dolor_garganta_yes
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.80, "y": 0.35}
+            group: 'dolor_garganta'
+            color: 'black'
+        
+        CheckBox:
+            id: dolor_garganta_no
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.85, "y": 0.35}
+            group: 'dolor_garganta'
+            color: 'black'
+        
+        CheckBox:
+            id: perdida_olfato_gusto_yes
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.80, "y": 0.30}
+            group: 'perdida_olfato_gusto'
+            color: 'black'
+        
+        CheckBox:
+            id: perdida_olfato_gusto_no
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.85, "y": 0.30}
+            group: 'perdida_olfato_gusto'
+            color: 'black'
+            active: False

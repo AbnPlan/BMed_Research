@@ -1,0 +1,36 @@
+#:kivy 2.0.0
+
+<Info@InfoLayout>:
+    FloatLayout:
+        Label:
+            text: "Info"
+            font_size: 50
+            color: 0,0,0,1
+            pos_hint: {"x":.42, "y":0.80}
+            size_hint: 0.20, 0.20
+            height: 100
+        
+        PicButton:
+            source: "ICONS/go_back.png"
+            size_hint_y: 0.05
+            size_hint_x: 0.05
+            pos_hint: {"x": -0.01, "y": 0.005}
+            on_press: root.manager.SMMainScreen()
+
+        Button:
+            text: '¿Cómo protegerse si va a salir?'
+            size_hint: (0.8, 0.1)
+            pos_hint: {"x": 0.1, "y": 0.2}
+            on_press: root.manager.SMInfo()
+        
+        Button:
+            text: '¿Cómo sobrellevar el estrés? '
+            size_hint: (0.8, 0.1)
+            pos_hint: {"x": 0.1, "y": 0.4}
+            on_press: root.manager.SMInfo()
+        
+        Button:
+            text: '¿Qué hacer si se enferma?'
+            size_hint: (0.8, 0.1)
+            pos_hint: {"x": 0.1, "y": 0.6}
+            on_press: root.manager.SMInfo()

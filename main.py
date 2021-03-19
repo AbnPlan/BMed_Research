@@ -19,6 +19,12 @@ from kivy.uix.label import Label
 from kivy.uix.checkbox import CheckBox
 
 Builder.load_file('main.kv')
+Builder.load_file('./KV_SCREENS/appointments.kv')
+Builder.load_file('./KV_SCREENS/entry_form.kv')
+Builder.load_file('./KV_SCREENS/info.kv')
+Builder.load_file('./KV_SCREENS/menu_screen.kv')
+Builder.load_file('./KV_SCREENS/survey.kv')
+
 Window.size = (1024, 600)
 Window.borderless = True
 
