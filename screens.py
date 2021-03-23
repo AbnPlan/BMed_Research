@@ -1,10 +1,13 @@
 import db_manager as db
 
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.button import ButtonBehavior
 from kivy.uix.image import Image
 from kivy.properties import ObjectProperty
+from kivy.uix.carousel import Carousel
+from kivy.uix.image import AsyncImage
+from kivy.uix.widget import Widget
+from kivy.uix.floatlayout import FloatLayout
 
 class MyScreenManager(ScreenManager):
     def __init__(self, **kwargs):
@@ -81,4 +84,29 @@ class Survey(Screen):
 
 class Info(Screen):
     '''Info screen'''
-    pass
+    def build(self):
+        self.ids.layout.remove_widget(self.ids.slide_1)
+        self.ids.layout.remove_widget(self.ids.slide_2)
+        self.ids.layout.remove_widget(self.ids.slide_3)
+        self.state = False
+
+    def add(self, slide):
+        self.ids.layout.remove_widget(self.ids.page_label)
+        self.ids.layout.add_widget(slide)
+        self.ids.layout.remove_widget(self.ids.btn_question_1)
+        self.ids.layout.remove_widget(self.ids.btn_question_2)
+        self.ids.layout.remove_widget(self.ids.btn_question_3)
+        self.ids.layout.remove_widget(self.ids.btn_back)
+        self.ids.layout.add_widget(self.ids.btn_back)
+        self.state = True
+
+    def remove(self):
+        self.ids.layout.add_widget(self.ids.page_label)
+        self.ids.layout.remove_widget(self.ids.slide_1)
+        self.ids.layout.remove_widget(self.ids.slide_2)
+        self.ids.layout.remove_widget(self.ids.slide_3)
+
+        self.ids.layout.add_widget(self.ids.btn_question_1)
+        self.ids.layout.add_widget(self.ids.btn_question_2)
+        self.ids.layout.add_widget(self.ids.btn_question_3)
+        self.state = False

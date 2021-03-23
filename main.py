@@ -29,7 +29,7 @@ Window.size = (1024, 600)
 Window.borderless = True
 
 class MainApp(App):
-    '''Contains the main app and the tittle of the app'''
+    '''Contains the main app and the title of the app'''
     def build(self):
         '''Builds the app by returning the Screen Manager'''
         return MyScreenManager(transition = RiseInTransition())
