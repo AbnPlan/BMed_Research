@@ -23,25 +23,30 @@
         BoxLayout:
             orientation: 'horizontal'
             pos_hint: {'x': -0.01, 'y': 0.6}
-            Image:
+            PicButton:
                 source: 'ICONS\icon_star.png'
                 size_hint: (0.1, 0.1)
+                on_press: root.ids.rating_1_star.state = 'down'
             
-            Image:
+            PicButton:
                 source: 'ICONS\icon_star.png'
                 size_hint: (0.1, 0.1)
+                on_press: root.ids.rating_2_star.state = 'down'
 
-            Image:
+            PicButton:
                 source: 'ICONS\icon_star.png'
                 size_hint: (0.1, 0.1)
+                on_press: root.ids.rating_3_star.state = 'down'
 
-            Image:
+            PicButton:
                 source: 'ICONS\icon_star.png'
                 size_hint: (0.1, 0.1)
+                on_press: root.ids.rating_4_star.state = 'down'
 
-            Image:
+            PicButton:
                 source: 'ICONS\icon_star.png'
-                size_hint: (0.1, 0.1)        
+                size_hint: (0.1, 0.1)  
+                on_press: root.ids.rating_5_star.state = 'down'     
     
     BoxLayout:
         orientation: 'vertical'

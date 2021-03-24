@@ -5,7 +5,6 @@ kivy.require('2.0.0')
 from kivy.config import Config
 Config.set('kivy', 'keyboard_mode', 'dock')
 
-
 from screens import *
 from kivy.app import App
 from kivy.lang import Builder
