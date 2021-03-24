@@ -1,88 +1,87 @@
 #:kivy 2.0.0
 
-<Info@InfoLayout>:
+<Info@FloatLayout>:
     on_pre_enter: self.build()
-    FloatLayout:
-        id: layout
-        Label:
-            id: page_label
-            text: "Info"
-            font_size: 50
-            color: 0,0,0,1
-            pos_hint: {"x":.42, "y":0.80}
-            size_hint: 0.20, 0.20
-            height: 100
-        
-        PicButton:
-            id: btn_back
-            source: "ICONS/go_back.png"
-            size_hint_y: 0.05
-            size_hint_x: 0.05
-            pos_hint: {"x": -0.01, "y": 0.005}
-            on_press: root.remove() if root.state else root.manager.SMMainScreen()
-        
-        Button:
-            id: btn_question_1
-            text: '¿Cómo protegerse si va a salir?'
-            color: 0,0,0,1
-            size_hint: (0.8, 0.1)
-            pos_hint: {"x": 0.1, "y": 0.6}
-            background_normal: ''
-            background_color: (0.62, 0.76, 0.90, 1.0)
-            on_press: root.add(root.ids.slide_1)
+    id: layout
+    Label:
+        id: page_label
+        text: "Info"
+        font_size: 50
+        color: 0,0,0,1
+        pos_hint: {"x":.42, "y":0.80}
+        size_hint: 0.20, 0.20
+        height: 100
+    
+    PicButton:
+        id: btn_back
+        source: "ICONS/go_back.png"
+        size_hint_y: 0.05
+        size_hint_x: 0.05
+        pos_hint: {"x": -0.01, "y": 0.005}
+        on_press: root.remove() if root.state else root.manager.SMMainScreen()
+    
+    Button:
+        id: btn_question_1
+        text: '¿Cómo protegerse si va a salir?'
+        color: 0,0,0,1
+        size_hint: (0.8, 0.1)
+        pos_hint: {"x": 0.1, "y": 0.6}
+        background_normal: ''
+        background_color: (0.62, 0.76, 0.90, 1.0)
+        on_press: root.add(root.ids.slide_1)
 
-        Button:
-            id: btn_question_2
-            text: '¿Cómo sobrellevar el estrés?'
-            color: 0,0,0,1
-            size_hint: (0.8, 0.1)
-            pos_hint: {"x": 0.1, "y": 0.4}
-            background_normal: ''
-            background_color: (0.62, 0.76, 0.90, 1.0)
-            on_press: root.add(root.ids.slide_2)
+    Button:
+        id: btn_question_2
+        text: '¿Cómo sobrellevar el estrés?'
+        color: 0,0,0,1
+        size_hint: (0.8, 0.1)
+        pos_hint: {"x": 0.1, "y": 0.4}
+        background_normal: ''
+        background_color: (0.62, 0.76, 0.90, 1.0)
+        on_press: root.add(root.ids.slide_2)
 
-        Button:
-            id: btn_question_3
-            text: '¿Qué hacer si se enferma?'
-            color: 0,0,0,1
-            size_hint: (0.8, 0.1)
-            pos_hint: {"x": 0.1, "y": 0.2}
-            background_normal: ''
-            background_color: (0.62, 0.76, 0.90, 1.0)
-            on_press: root.add(root.ids.slide_3)
+    Button:
+        id: btn_question_3
+        text: '¿Qué hacer si se enferma?'
+        color: 0,0,0,1
+        size_hint: (0.8, 0.1)
+        pos_hint: {"x": 0.1, "y": 0.2}
+        background_normal: ''
+        background_color: (0.62, 0.76, 0.90, 1.0)
+        on_press: root.add(root.ids.slide_3)
 
-        Carousel:
-            id: slide_1
-            direction: 'right'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_1/SlideA.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_1/SlideB.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_1/SlideC.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_1/SlideD.PNG'
+    Carousel:
+        id: slide_1
+        direction: 'right'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_1/SlideA.PNG'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_1/SlideB.PNG'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_1/SlideC.PNG'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_1/SlideD.PNG'
 
-        Carousel:
-            id: slide_2
-            direction: 'right'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_2/SlideA.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_2/SlideB.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_2/SlideC.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_2/SlideD.PNG'
+    Carousel:
+        id: slide_2
+        direction: 'right'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_2/SlideA.PNG'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_2/SlideB.PNG'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_2/SlideC.PNG'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_2/SlideD.PNG'
 
-        Carousel:
-            id: slide_3
-            direction: 'right'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_3/SlideA.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_3/SlideB.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_3/SlideC.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_3/SlideD.PNG'
+    Carousel:
+        id: slide_3
+        direction: 'right'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_3/SlideA.PNG'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_3/SlideB.PNG'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_3/SlideC.PNG'
+        AsyncImage:
+            source: 'SLIDES/SLIDE_3/SlideD.PNG'
