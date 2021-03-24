@@ -1,18 +1,104 @@
 #:kivy 2.0.0
 
-<Survey@SurveyLayout>:
+<Survey>:
     FloatLayout:
         Label:
             text: "Survey"
             font_size: 50
             color: 0,0,0,1
-            pos_hint: {"x":.42, "y":0.80}
+            pos_hint: {"x":.40, "y":0.80}
             size_hint: 0.20, 0.20
-            height: 100
-        
+        Label:
+            text: "Please rate us!"
+            font_size: 25
+            color: 0,0,0,1
+            pos_hint: {"x":.40, "y":0.73}
+            size_hint: 0.20, 0.20
         PicButton:
             source: "ICONS/go_back.png"
             size_hint_y: 0.05
             size_hint_x: 0.05
             pos_hint: {"x": -0.01, "y": 0.005}
             on_press: root.manager.SMMainScreen()
+        BoxLayout:
+            orientation: 'horizontal'
+            pos_hint: {'x': -0.01, 'y': 0.6}
+            Image:
+                source: 'ICONS\icon_star.png'
+                size_hint: (0.1, 0.1)
+            
+            Image:
+                source: 'ICONS\icon_star.png'
+                size_hint: (0.1, 0.1)
+
+            Image:
+                source: 'ICONS\icon_star.png'
+                size_hint: (0.1, 0.1)
+
+            Image:
+                source: 'ICONS\icon_star.png'
+                size_hint: (0.1, 0.1)
+
+            Image:
+                source: 'ICONS\icon_star.png'
+                size_hint: (0.1, 0.1)        
+    
+    BoxLayout:
+        orientation: 'vertical'
+        pos_hint: {'x': -0.01, 'y': 0.1}
+        spacing: 35
+
+        BoxLayout:
+            orientation: 'horizontal'
+            CheckBox:
+                id: rating_1_star
+                size_hint: (0.05, 0.05)
+                group: 'rating'
+                color: 'black'
+            
+            CheckBox:
+                id: rating_2_star
+                size_hint: (0.05, 0.05)
+                group: 'rating'
+                color: 'black'
+
+            CheckBox:
+                id: rating_3_star
+                size_hint: (0.05, 0.05)
+                group: 'rating'
+                color: 'black'
+
+            CheckBox:
+                id: rating_4_star
+                size_hint: (0.05, 0.05)
+                group: 'rating'
+                color: 'black'
+
+            CheckBox:
+                id: rating_5_star
+                size_hint: (0.05, 0.05)
+                group: 'rating'
+                color: 'black'
+
+        Label:
+            text: '¿Algun comentario o sugerencia? (Opcional)'
+            pos_hint: {"x": 0.1, "y": 0}
+            size_hint: (0.21, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+
+        TextInput:
+            id: full_name
+            size_hint: (0.8, 0.25)
+            hint_text: 'Opcional'
+            pos_hint: {"x": 0.1, "y": 0}
+            multiline: True
+
+        Button:
+            id: submit_survey
+            text: 'Submit'
+            size_hint: (0.10, 0.10)
+            pos_hint: {"x": 0.45, "y": 0}
+            on_press: 
+                # Survey.save_survey()
+                root.manager.SMMainScreen()
