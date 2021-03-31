@@ -9,6 +9,7 @@ from kivy.uix.image import AsyncImage
 from kivy.uix.widget import Widget
 from kivy.uix.floatlayout import FloatLayout
 
+
 class MyScreenManager(ScreenManager):
     def __init__(self, **kwargs):
         super(MyScreenManager, self).__init__(**kwargs)
