@@ -69,7 +69,6 @@ class EntryForm(Screen):
             self.ids.country.text,
             self.ids.zip_code.text,
             self.ids.health_insurance.text
-
         )
 
         db_connection.close()
@@ -89,20 +88,23 @@ class Info(Screen):
         self.ids.layout.remove_widget(self.ids.slide_1)
         self.ids.layout.remove_widget(self.ids.slide_2)
         self.ids.layout.remove_widget(self.ids.slide_3)
+        
         self.state = False
 
     def add(self, slide):
         self.ids.layout.remove_widget(self.ids.page_label)
-        self.ids.layout.add_widget(slide)
         self.ids.layout.remove_widget(self.ids.btn_question_1)
         self.ids.layout.remove_widget(self.ids.btn_question_2)
         self.ids.layout.remove_widget(self.ids.btn_question_3)
         self.ids.layout.remove_widget(self.ids.btn_back)
+
+        self.ids.layout.add_widget(slide)
+        slide.load_slide(slide.slides[0])
         self.ids.layout.add_widget(self.ids.btn_back)
+
         self.state = True
 
-    def remove(self):
-        self.ids.layout.add_widget(self.ids.page_label)
+    def remove(self):      
         self.ids.layout.remove_widget(self.ids.slide_1)
         self.ids.layout.remove_widget(self.ids.slide_2)
         self.ids.layout.remove_widget(self.ids.slide_3)
@@ -110,4 +112,6 @@ class Info(Screen):
         self.ids.layout.add_widget(self.ids.btn_question_1)
         self.ids.layout.add_widget(self.ids.btn_question_2)
         self.ids.layout.add_widget(self.ids.btn_question_3)
+        self.ids.layout.add_widget(self.ids.page_label)
+
         self.state = False

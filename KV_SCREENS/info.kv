@@ -54,35 +54,143 @@
         Carousel:
             id: slide_1
             direction: 'right'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_1/SlideA.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_1/SlideB.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_1/SlideC.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_1/SlideD.PNG'
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture1.png'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Opte por una mascarilla con dos o más \ncapas de telas lavables y respirables que \nse ajuste bien a los lados de su cara para \nprotegerse usted y proteger a otras \npersonas.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture2.png'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Evite los espacios cerrados tantos \ncomo sea posible, es posible que se \nle dificulte más mantener la \ndistancia de 6 pies en lugares\n cerrados.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture3.jpg'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Su riesgo de exposición al \nCOVID-19 aumenta con la \ncantidad de gente con la que \ntiene contacto.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture4.png'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Su riesgo de exposición al \nCOVID-19 aumenta con la \ncantidad de gente con la que \ntiene contacto.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
 
         Carousel:
             id: slide_2
             direction: 'right'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_2/SlideA.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_2/SlideB.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_2/SlideC.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_2/SlideD.PNG'
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture5.png'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Practique yoga, escuche música, \ntrabaje en su jardín \npara relajarse.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture6.jpg'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Busque formas nuevas de \nconectarse con familiares y \namigos, recibir apoyo y \ncompartir lo que siente.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture7.png'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Coma sano y descanse bien.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture8.jpg'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Lea, ejercítese o empiece con un \npasatiempo nuevo para \nmantenerse ocupado.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
 
         Carousel:
             id: slide_3
             direction: 'right'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_3/SlideA.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_3/SlideB.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_3/SlideC.PNG'
-            AsyncImage:
-                source: 'SLIDES/SLIDE_3/SlideD.PNG'
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture9.png'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Quédese en casa, excepto si \nnecesita atención médica. La \nmayoría de las personas con \nCOVID-19 tienen síntomas leves y \nse pueden recuperar en casa sin \natención médica. Si debe dejar el \naislamiento, use una mascarilla, \nmantenga una distancia de 6 pies \nde otras personas, lávese las \nmanos con frecuencia y limpie \ntodas las superficies que toca.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture10.png'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Aíslese de sus familiares para \nevitar contagiarlos y contagiar a las \npersonas con las que podrían tener \ncontacto, como abuelos.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture11.png'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Incluso si no se siente \nenfermo, puede propagar \nel COVID-19 a otras \npersonas. Procure \nproteger a todos como si \nfueran las personas más \nfrágiles de su familia.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
+            FloatLayout:
+                Image:
+                    source: 'SLIDE_IMG\Picture12.png'
+                    # size_hint: (0.8, 0.1)
+                    pos_hint: {"x": 0.25, "y": -0.001}
+                Label:
+                    text: '''Si nota señales de advertencia \nde emergencia, como \ndificultad para respirar, dolor u \nopresión en el pecho, acuda de \ninmediato a un médico.'''
+                    font_size: 26
+                    color: 0,0,0,1
+                    pos_hint: {"x":.2, "y":0.40}
+                    size_hint: 0.15, 0.20
