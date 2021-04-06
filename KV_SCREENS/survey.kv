@@ -1,109 +1,460 @@
 #:kivy 2.0.0
 
 <Survey>:
-    FloatLayout:
-        Label:
-            text: "Survey"
-            font_size: 50
-            color: 0,0,0,1
-            pos_hint: {"x":.40, "y":0.80}
-            size_hint: 0.20, 0.20
-        Label:
-            text: "Please rate us!"
-            font_size: 25
-            color: 0,0,0,1
-            pos_hint: {"x":.40, "y":0.73}
-            size_hint: 0.20, 0.20
-        PicButton:
-            source: "ICONS/go_back.png"
-            size_hint_y: 0.1
-            size_hint_x: 0.1
-            pos_hint: {"x": -0.01, "y": 0.005}
-            on_press: root.manager.SMMainScreen()
-        BoxLayout:
-            orientation: 'horizontal'
-            pos_hint: {'x': -0.01, 'y': 0.6}
-            PicButton:
-                source: 'ICONS\icon_star.png'
-                size_hint: (0.1, 0.1)
-                on_press: root.ids.rating_1_star.state = 'down'
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+        GridLayout:
+            padding: 10
+            spacing: 20
+            cols: 1
+            size_hint_y: None
+            height: 3000
+            Label:
+                text: "Survey"
+                font_size: 50
+                color: 0,0,0,1
+                size_hint: 0.20, 0.20
+            BoxLayout:
+                id: lt0
+                orientation: 'vertical'      
+                Label:
+                    text: '1. ¿Cómo calificaría su experiencia general con el servicio?'
+                    color: 0,0,0,1
+
+                BoxLayout:
+                    Label:
+                        text: 'a. Totalmente Satisfactoria'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_0_0
+                        group: 'q_0'
+                        color: 'black'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'b. Satisfactoria'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_0_1
+                        group: 'q_0'
+                        color: 'black'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'c. Neutral'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_0_2
+                        group: 'q_0'
+                        color: 'black'
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'd. Insatisfactoria'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_0_3
+                        group: 'q_0'
+                        color: 'black'
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'd. Totalmente Insatisfactoria'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_0_4
+                        group: 'q_0'
+                        color: 'black'
+            BoxLayout:
+                id: lt1
+                orientation: 'vertical'      
+                Label:
+                    text: '2. ¿Considera que nuestro sistema satisface sus necesidades?'
+                    color: 0,0,0,1
+
+                BoxLayout:
+                    Label:
+                        text: 'a. Totalmente Satisfactoria'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_1_0
+                        group: 'q_1'
+                        color: 'black'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'b. Satisfactoria'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_1_1
+                        group: 'q_1'
+                        color: 'black'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'c. Neutral'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_1_2
+                        group: 'q_1'
+                        color: 'black'
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'd. Es útil, pero existen mejores opciones'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_1_3
+                        group: 'q_1'
+                        color: 'black'
+
+            BoxLayout:
+                id: lt2
+                orientation: 'vertical'      
+                Label:
+                    text: '3. ¿Como es la calidad de la información provista?'
+                    color: 0,0,0,1
+
+                BoxLayout:
+                    Label:
+                        text: 'a. Alta. La información es precisa y respondía mis dudas adecuadamente.'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_2_0
+                        group: 'q_2'
+                        color: 'black'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'b. Buena. Me permitió conocer información general, aunque aún tenía dudas.'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_2_1
+                        group: 'q_2'
+                        color: 'black'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'c. Media. Pude conocer solo algunas características. '
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_2_2
+                        group: 'q_2'
+                        color: 'black'
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'd. Baja. No me permite aclarar mis dudas. '
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_2_3
+                        group: 'q_2'
+                        color: 'black'
+
+            BoxLayout:
+                id: lt3
+                orientation: 'vertical'      
+                Label:
+                    text: '4. ¿Cuál es la probabilidad de que vuelva a utilizar nuestro sistema en el futuro?'
+                    color: 0,0,0,1
+
+                BoxLayout:
+                    Label:
+                        text: 'a. Muy Probable'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_3_0
+                        group: 'q_3'
+                        color: 'black'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'b. Probable'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_3_1
+                        group: 'q_3'
+                        color: 'black'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'c. Poco Probable'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_3_2
+                        group: 'q_3'
+                        color: 'black'
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: 'd. Nada Probable'
+                        color: 0,0,0,1
+                    CheckBox:
+                        id: q_3_3
+                        group: 'q_3'
+                        color: 'black'
             
-            PicButton:
-                source: 'ICONS\icon_star.png'
-                size_hint: (0.1, 0.1)
-                on_press: root.ids.rating_2_star.state = 'down'
+            BoxLayout:
+                orientation: 'vertical'
+                id: lt4
 
-            PicButton:
-                source: 'ICONS\icon_star.png'
-                size_hint: (0.1, 0.1)
-                on_press: root.ids.rating_3_star.state = 'down'
+                Label:
+                    text: '4. ¿Cómo calificaría nuestro sistema en las siguientes áreas? '
+                    color: 0,0,0,1
 
-            PicButton:
-                source: 'ICONS\icon_star.png'
-                size_hint: (0.1, 0.1)
-                on_press: root.ids.rating_4_star.state = 'down'
+                GridLayout:
+                    cols: 5
+                    rows: 5
+                    spacing: 10
 
-            PicButton:
-                source: 'ICONS\icon_star.png'
-                size_hint: (0.1, 0.1)  
-                on_press: root.ids.rating_5_star.state = 'down'     
-    
-    BoxLayout:
-        orientation: 'vertical'
-        pos_hint: {'x': -0.01, 'y': 0.1}
-        spacing: 35
+                    Label:
+                        text: 'Leyenda'
+                        color: 0,0,0,1
 
-        BoxLayout:
-            orientation: 'horizontal'
-            CheckBox:
-                id: rating_1_star
-                size_hint: (0.05, 0.05)
-                group: 'rating'
-                color: 'black'
-            
-            CheckBox:
-                id: rating_2_star
-                size_hint: (0.05, 0.05)
-                group: 'rating'
-                color: 'black'
+                    Label:
+                        text: 'Insatisfecho'
+                        color: 0,0,0,1
 
-            CheckBox:
-                id: rating_3_star
-                size_hint: (0.05, 0.05)
-                group: 'rating'
-                color: 'black'
+                    Label:
+                        text: 'Neutro'
+                        color: 0,0,0,1
 
-            CheckBox:
-                id: rating_4_star
-                size_hint: (0.05, 0.05)
-                group: 'rating'
-                color: 'black'
+                    Label:
+                        text: 'Satisfecho'
+                        color: 0,0,0,1
 
-            CheckBox:
-                id: rating_5_star
-                size_hint: (0.05, 0.05)
-                group: 'rating'
-                color: 'black'
+                    Label:
+                        text: 'Muy Satisfecho'
+                        color: 0,0,0,1
 
-        Label:
-            text: '¿Algun comentario o sugerencia? (Opcional)'
-            pos_hint: {"x": 0.1, "y": 0}
-            size_hint: (0.21, 0.05)
-            font_size: 15
-            color: 0,0,0,1
+                    Label:
+                        text: 'Calidad'
+                        color: 0,0,0,1
+                        
+                    CheckBox:
+                        id: rating_quality_1
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_quality'
+                        color: 'black'
+                    
+                    CheckBox:
+                        id: rating_quality_2
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_quality'
+                        color: 'black'
 
-        TextInput:
-            id: full_name
-            size_hint: (0.8, 0.25)
-            hint_text: 'Opcional'
-            pos_hint: {"x": 0.1, "y": 0}
-            multiline: True
+                    CheckBox:
+                        id: rating_quality_3
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_quality'
+                        color: 'black'
 
-        Button:
-            id: submit_survey
-            text: 'Submit'
-            size_hint: (0.10, 0.10)
-            pos_hint: {"x": 0.45, "y": 0}
-            on_press: 
-                # Survey.save_survey()
-                root.manager.SMMainScreen()
+                    CheckBox:
+                        id: rating_quality_4
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_quality'
+                        color: 'black'
+
+                    Label:
+                        text: 'Atractivo Visual'
+                        color: 0,0,0,1
+
+                    CheckBox:
+                        id: rating_visual_1
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_visual'
+                        color: 'black'
+                    
+                    CheckBox:
+                        id: rating_visual_2
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_visual'
+                        color: 'black'
+
+                    CheckBox:
+                        id: rating_visual_3
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_visual'
+                        color: 'black'
+
+                    CheckBox:
+                        id: rating_visual_4
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_visual'
+                        color: 'black'
+
+                    Label:
+                        text: 'Instrucciones de uso'
+                        color: 0,0,0,1
+
+                    CheckBox:
+                        id: rating_user_friendly_1
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_user_friendly'
+                        color: 'black'
+                    
+                    CheckBox:
+                        id: rating_user_friendly_2
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_user_friendly'
+                        color: 'black'
+
+                    CheckBox:
+                        id: rating_user_friendly_3
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_user_friendly'
+                        color: 'black'
+
+                    CheckBox:
+                        id: rating_user_friendly_4
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_user_friendly'
+                        color: 'black'
+
+                    Label:
+                        text: 'Funcionabilidad'
+                        color: 0,0,0,1
+
+                    CheckBox:
+                        id: rating_functionality_1
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_functionality'
+                        color: 'black'
+                    
+                    CheckBox:
+                        id: rating_functionality_2
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_functionality'
+                        color: 'black'
+
+                    CheckBox:
+                        id: rating_functionality_3
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_functionality'
+                        color: 'black'
+
+                    CheckBox:
+                        id: rating_functionality_4
+                        size_hint: (0.05, 0.05)
+                        group: 'rating_functionality'
+                        color: 'black'
+
+            BoxLayout:
+                orientation: 'vertical'
+                id: lt5
+
+                Label:
+                    text: '6. Por favor, marque de las áreas mencionadas cual le gustaría mejoraran.'
+                    color: 0,0,0,1
+
+                GridLayout:
+                    cols: 4
+                    rows: 4
+                    spacing: 10
+
+                    Label:
+                        text: 'Opciones'
+                        color: 0,0,0,1
+
+                    Label:
+                        text: 'Importante'
+                        color: 0,0,0,1
+
+                    Label:
+                        text: 'Neutro'
+                        color: 0,0,0,1
+
+                    Label:
+                        text: 'No es importante'
+                        color: 0,0,0,1
+
+                    Label:
+                        text: 'Tamaño de la pantalla'
+                        color: 0,0,0,1
+                        
+                    CheckBox:
+                        id: improvement_size_1
+                        size_hint: (0.05, 0.05)
+                        group: 'improvement_size'
+                        color: 'black'
+                    
+                    CheckBox:
+                        id: improvement_size_2
+                        size_hint: (0.05, 0.05)
+                        group: 'improvement_size'
+                        color: 'black'
+
+                    CheckBox:
+                        id: improvement_size_3
+                        size_hint: (0.05, 0.05)
+                        group: 'improvement_size'
+                        color: 'black'
+
+                    Label:
+                        text: 'Funcionamiento'
+                        color: 0,0,0,1
+
+                    CheckBox:
+                        id: improvement_functionality_1
+                        size_hint: (0.05, 0.05)
+                        group: 'improvement_functionality'
+                        color: 'black'
+                    
+                    CheckBox:
+                        id: improvement_functionality_2
+                        size_hint: (0.05, 0.05)
+                        group: 'improvement_functionality'
+                        color: 'black'
+
+                    CheckBox:
+                        id: improvement_functionality_3
+                        size_hint: (0.05, 0.05)
+                        group: 'improvement_functionality'
+                        color: 'black'
+
+                    Label:
+                        text: 'Calidad de la información'
+                        color: 0,0,0,1
+
+                    CheckBox:
+                        id: improvement_quality_1
+                        size_hint: (0.05, 0.05)
+                        group: 'improvement_quality'
+                        color: 'black'
+                    
+                    CheckBox:
+                        id: improvement_quality_2
+                        size_hint: (0.05, 0.05)
+                        group: 'improvement_quality'
+                        color: 'black'
+
+                    CheckBox:
+                        id: improvement_quality_3
+                        size_hint: (0.05, 0.05)
+                        group: 'improvement_quality'
+                        color: 'black'
+
+            BoxLayout:
+                id: lt6
+                orientation: 'vertical'      
+                Label:
+                    text: '7. ¿Tiene algún comentario adicional para nosotros?'
+                    color: 0,0,0,1
+                TextInput:
+                    id: comments
+                    hint_text: ''
+                    multiline: True
+
+            FloatLayout:
+                size_hint: 0.2, 0.2
+
+            Button:
+                text: 'Submit'
+                on_release: pass
+                size_hint: .1, .1
