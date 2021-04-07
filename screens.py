@@ -13,6 +13,11 @@ from kivy.uix.floatlayout import FloatLayout
 class MyScreenManager(ScreenManager):
     def __init__(self, **kwargs):
         super(MyScreenManager, self).__init__(**kwargs)
+        self.add_widget(MenuScreen(name='menu'))
+        self.add_widget(EntryForm(name='entry'))
+        self.add_widget(Appointments(name='appointments'))
+        self.add_widget(Survey(name='survey'))
+        self.add_widget(Info(name='info'))
 
     def SMMainScreen(self):
         '''Change screen to Main Menu'''
