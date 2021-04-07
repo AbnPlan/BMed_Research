@@ -5,7 +5,7 @@
     FloatLayout:
         id: EntryForm
         Label:
-            text: "Entry Form"
+            text: "Forma de entrada"
             font_size: 50
             color: 0,0,0,1
             pos_hint: {"x":.42, "y":0.80}
@@ -27,55 +27,79 @@
                 root.manager.SMMainScreen()
         Label:
             text: 'Nombre:'
-            pos_hint: {"x": -0.075, "y": 0.78}
+            pos_hint: {"x": 0.025, "y": 0.78}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
         Label:
             text: 'Telefono:'
-            pos_hint: {"x": -0.077, "y": 0.70}
+            pos_hint: {"x": 0.023, "y": 0.70}
             size_hint: (.25, .05)
             font_size: 15
             color: 0,0,0,1
         Label:
             text: 'Dirección:'
-            pos_hint: {"x": -0.08, "y": 0.63}
+            pos_hint: {"x": 0.40, "y": 0.80}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
         Label:
             text: 'Linea 1:'
-            pos_hint: {"x": -0.08, "y": 0.58}
+            pos_hint: {"x": 0.40, "y": 0.75}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
         Label:
             text: 'Linea 2:'
-            pos_hint: {"x": -0.08, "y": 0.50}
+            pos_hint: {"x": 0.40, "y": 0.68}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
         Label:
             text: 'Pueblo:'
-            pos_hint: {"x": -0.08, "y": 0.42}
+            pos_hint: {"x": 0.40, "y": 0.58}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
         Label:
             text: 'Pais:'
-            pos_hint: {"x": 0.105, "y": 0.42}
+            pos_hint: {"x": 0.40, "y": 0.50}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
         Label:
             text: 'Zip:'
-            pos_hint: {"x": -0.068, "y": 0.34}
+            pos_hint: {"x": 0.60, "y": 0.58}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
         Label:
             text: 'Seguro Medico:'
-            pos_hint: {"x": -0.068, "y": 0.26}
+            pos_hint: {"x": 0.025, "y": 0.65}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        Label:
+            text: 'Triple S'
+            pos_hint: {"x": 0.10, "y": 0.62}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        Label:
+            text: 'MCS'
+            pos_hint: {"x": 0.10, "y": 0.58}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        Label:
+            text: 'Reforma'
+            pos_hint: {"x": 0.20, "y": 0.62}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        Label:
+            text: 'Humana'
+            pos_hint: {"x": 0.20, "y": 0.58}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
@@ -83,48 +107,48 @@
             id: full_name
             hint_text: 'Nombre'
             size_hint: (0.25, 0.05)
-            pos_hint: {"x": 0.10, "y": 0.78}
+            pos_hint: {"x": 0.20, "y": 0.78}
             multiline: False
         TextInput:
             id: phone_number
             hint_text: 'Telefono'
             size_hint: (0.25, 0.05)
-            pos_hint: {"x": 0.10, "y": 0.70}
+            pos_hint: {"x": 0.20, "y": 0.70}
             multiline: False
         TextInput:
             id: address_line1
             hint_text: 'Linea 1'
             size_hint: (0.25, 0.05)
-            pos_hint: {"x": 0.10, "y": 0.58}
+            pos_hint: {"x": 0.57, "y": 0.75}
             multiline: False
         TextInput:
             id: address_line2
             hint_text: 'Linea 2'
             size_hint: (.25, .05)
-            pos_hint: {"x": .10, "y": 0.50}
+            pos_hint: {"x": .57, "y": 0.68}
             multiline: False
         TextInput:
             id: town
             hint_text: 'Pueblo'
             size_hint: (0.12, 0.05)
-            pos_hint: {"x": 0.08, "y": 0.42}
+            pos_hint: {"x": 0.56, "y": 0.58}
             multiline: False
         TextInput:
             id: country
             text: 'Puerto Rico'
             hint_text: 'Pais'
             size_hint: (0.10, 0.05)
-            pos_hint: {"x": .25, "y": 0.42}
+            pos_hint: {"x": 0.56, "y": 0.50}
             multiline: False
         TextInput:
             id: zip_code
             hint_text: 'Zip'
             size_hint: (0.10, 0.05)
-            pos_hint: {"x": 0.08, "y": 0.34}
+            pos_hint: {"x": 0.75, "y": 0.58}
             multiline: False
         TextInput:
             id: health_insurance
-            hint_text: 'Seguro Medico'
+            hint_text: 'Otro'
             size_hint: (0.20, 0.05)
-            pos_hint: {"x": 0.12, "y": 0.26}
+            pos_hint: {"x": 0.10, "y": 0.50}
             multiline: False
