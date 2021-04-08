@@ -116,8 +116,11 @@
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG\Picture6.jpg'
-                    # size_hint: (0.8, 0.1)
-                    pos_hint: {"x": 0.25, "y": -0.001}
+                    size_hint_y: None
+                    size_hint_x: None
+                    size: 500, 500
+                    allow_stretch: True
+                    pos_hint: {"x": 0.45, "y": -0.001}
                 Label:
                     text: '''Busque formas nuevas de \nconectarse con familiares y \namigos, recibir apoyo y \ncompartir lo que siente.'''
                     font_size: 26
@@ -127,19 +130,23 @@
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG\Picture7.png'
-                    # size_hint: (0.8, 0.1)
-                    pos_hint: {"x": 0.25, "y": -0.001}
+                    size_hint_y: 1
+                    size_hint_x: 1
+                    allow_stretch: True                    
+                    pos_hint: {"x": 0, "y": 0}
                 Label:
                     text: '''Coma sano y descanse bien.'''
                     font_size: 26
                     color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
+                    pos_hint: {"x":0.7, "y":0.5}
                     size_hint: 0.15, 0.20
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG\Picture8.jpg'
-                    # size_hint: (0.8, 0.1)
-                    pos_hint: {"x": 0.25, "y": -0.001}
+                    size_hint_y: 0.5
+                    size_hint_x: 0.5
+                    allow_stretch: True  
+                    pos_hint: {"x": 0.48, "y": 0.25}
                 Label:
                     text: '''Lea, ejercítese o empiece con un \npasatiempo nuevo para \nmantenerse ocupado.'''
                     font_size: 26
@@ -175,8 +182,10 @@
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG\Picture11.png'
-                    # size_hint: (0.8, 0.1)
-                    pos_hint: {"x": 0.25, "y": -0.001}
+                    size_hint_y: 0.5
+                    size_hint_x: 0.5
+                    allow_stretch: True
+                    pos_hint: {"x": 0.49, "y": .25}
                 Label:
                     text: '''Incluso si no se siente \nenfermo, puede propagar \nel COVID-19 a otras \npersonas. Procure \nproteger a todos como si \nfueran las personas más \nfrágiles de su familia.'''
                     font_size: 26
@@ -186,8 +195,10 @@
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG\Picture12.png'
-                    # size_hint: (0.8, 0.1)
-                    pos_hint: {"x": 0.25, "y": -0.001}
+                    size_hint_y: 0.5
+                    size_hint_x: 0.5
+                    allow_stretch: True                    
+                    pos_hint: {"x": 0.49, "y": .25}
                 Label:
                     text: '''Si nota señales de advertencia \nde emergencia, como \ndificultad para respirar, dolor u \nopresión en el pecho, acuda de \ninmediato a un médico.'''
                     font_size: 26
