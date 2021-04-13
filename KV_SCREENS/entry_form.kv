@@ -1,7 +1,7 @@
 #:kivy 2.0.0
 
 <EntryForm>:
-    on_leave: root.clear_text()
+    on_enter: root.clear_text()
     FloatLayout:
         id: EntryForm
         Label:
@@ -81,13 +81,7 @@
             color: 0,0,0,1
         Label:
             text: 'Triple S'
-            pos_hint: {"x": 0.10, "y": 0.62}
-            size_hint: (0.25, 0.05)
-            font_size: 15
-            color: 0,0,0,1
-        Label:
-            text: 'MCS'
-            pos_hint: {"x": 0.10, "y": 0.58}
+            pos_hint: {"x": 0.05, "y": 0.62}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
@@ -98,13 +92,19 @@
             font_size: 15
             color: 0,0,0,1
         Label:
+            text: 'MCS'
+            pos_hint: {"x": 0.05, "y": 0.56}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        Label:
             text: 'Humana'
-            pos_hint: {"x": 0.20, "y": 0.58}
+            pos_hint: {"x": 0.20, "y": 0.56}
             size_hint: (0.25, 0.05)
             font_size: 15
             color: 0,0,0,1
         TextInput:
-            id: full_name
+            id: ef_full_name
             hint_text: 'Nombre'
             size_hint: (0.25, 0.05)
             pos_hint: {"x": 0.20, "y": 0.78}
@@ -150,5 +150,35 @@
             id: health_insurance
             hint_text: 'Otro'
             size_hint: (0.20, 0.05)
-            pos_hint: {"x": 0.10, "y": 0.50}
+            pos_hint: {"x": 0.15, "y": 0.50}
             multiline: False
+        CheckBox:
+            id: tripleS
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.62}
+            group: 'seguro'
+            color: 'black'
+        CheckBox:
+            id: reforma
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.25, "y": 0.62}
+            group: 'seguro'
+            color: 'black'
+        CheckBox:
+            id: mcs
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.56}
+            group: 'seguro'
+            color: 'black'
+        CheckBox:
+            id: humana
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.25, "y": 0.56}
+            group: 'seguro'
+            color: 'black'
+        CheckBox:
+            id: other
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.50}
+            group: 'seguro'
+            color: 'black'
