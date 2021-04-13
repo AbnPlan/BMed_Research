@@ -46,7 +46,7 @@ class EntryForm(Screen):
     '''Entry form screen'''
     def clear_text(self):
         '''Clear all textboxes'''
-        self.ids.full_name.text = ''
+        self.ids.ef_full_name.text = ''
         self.ids.phone_number.text = ''
         self.ids.address_line1.text = ''
         self.ids.address_line2.text = ''
@@ -54,6 +54,7 @@ class EntryForm(Screen):
         self.ids.country.text = 'Puerto Rico'
         self.ids.zip_code.text = ''
         self.ids.health_insurance.text = ''
+        self.ids.other.state = 'down'
 
     def save_form(self):
         '''Save form into Database'''
