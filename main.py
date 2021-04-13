@@ -8,14 +8,9 @@ Config.set('kivy', 'keyboard_mode', 'dock')
 from screens import *
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.core.window import Keyboard, Window
-from kivy.uix.screenmanager import ScreenManager, RiseInTransition
-from kivy.uix.checkbox import CheckBox
-from kivy.uix.widget import Widget
-from kivy.uix.button import Button
-from kivy.uix.textinput import TextInput
-from kivy.uix.label import Label
-from kivy.uix.checkbox import CheckBox
+from kivy.core.window import Window
+import VKeyboardPatch
+from kivy.uix.screenmanager import RiseInTransition\
 
 Builder.load_file('main.kv')
 Builder.load_file('./KV_SCREENS/appointments.kv')
