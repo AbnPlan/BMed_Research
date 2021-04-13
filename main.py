@@ -10,7 +10,7 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 import VKeyboardPatch
-from kivy.uix.screenmanager import RiseInTransition\
+from kivy.uix.screenmanager import RiseInTransition
 
 Builder.load_file('main.kv')
 Builder.load_file('./KV_SCREENS/appointments.kv')
