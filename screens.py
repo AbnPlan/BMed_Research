@@ -3,12 +3,6 @@ import db_manager as db
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.button import ButtonBehavior
 from kivy.uix.image import Image
-from kivy.properties import ObjectProperty
-from kivy.uix.carousel import Carousel
-from kivy.uix.image import AsyncImage
-from kivy.uix.widget import Widget
-from kivy.uix.floatlayout import FloatLayout
-
 
 class MyScreenManager(ScreenManager):
     def __init__(self, **kwargs):
