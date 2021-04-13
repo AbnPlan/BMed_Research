@@ -19,14 +19,13 @@
             source: "ICONS/icon_1.png"
             size_hint_y: 0.30
             size_hint_x: 0.30
-            pos_hint: {"x": -0.02, "y": 0.23} 
+            pos_hint: {"x": -0.02, "y": 0.23}
             on_press: root.manager.SMEntry()
 
         PicButton:
             source: "ICONS/icon_2.png"
             size_hint_y: 0.30
             size_hint_x: 0.30
-
             pos_hint: {"x": 0.23, "y": 0.23}
             on_press: root.manager.SMAppointments()
 
@@ -43,10 +42,3 @@
             size_hint_x: 0.30
             pos_hint: {"x": 0.71, "y": 0.23}
             on_press: root.manager.SMsurvey()
-
-        #Button:
-            #text: 'EXIT'
-            #size_hint_y: 0.05
-            #size_hint_x: 0.05
-            #pos_hint: {"x": 0, "y": 0.95}
-            #on_press : app.stop()
