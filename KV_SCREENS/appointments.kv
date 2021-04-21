@@ -1,20 +1,100 @@
 #:kivy 2.0.0
 
 <Appointments>:
+    on_enter: root.clear()
     FloatLayout:
+        # Tittle
         Label:
-            text: "Appointments"
+            text: "Citas"
             font_size: 50
             color: 0,0,0,1
             pos_hint: {"x":.42, "y":0.80}
             size_hint: 0.20, 0.20
             height: 100
+
+        # Name Info
+        Label:
+            text: 'Nombre:'
+            pos_hint: {"x": -0.05, "y": 0.78}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
+        TextInput:
+            id: a_full_name
+            hint_text: 'Nombre'
+            size_hint: (0.20, 0.05)
+            pos_hint: {"x": 0.12, "y": 0.78}
+            multiline: False
+
+        # Urgency Level
+        Label:
+            text: 'Nivel de emergencia:'
+            pos_hint: {"x": -0.009, "y": 0.70}
+            size_hint: (0.25, 0.05)
+            font_size: 15
+            color: 0,0,0,1
         PicButton:
-            source: "ICONS/go_back.png"
-            size_hint_y: 0.1
-            size_hint_x: 0.1
-            pos_hint: {"x": -0.01, "y": 0.005}
-            on_press: root.manager.SMMainScreen()
+            source: "ICONS/Urgency/Urgency1.png"
+            size_hint_y: 0.10
+            size_hint_x: 0.10
+            pos_hint: {"x": 0.02, "y": 0.58}
+            on_press: root.ids.urgency_lvl1.state = 'down'
+        CheckBox:
+            id: urgency_lvl1
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.045, "y": 0.53}
+            group: 'urgency'
+            color: 'black'
+        PicButton:
+            source: "ICONS/Urgency/Urgency2.png"
+            size_hint_y: 0.10
+            size_hint_x: 0.10
+            pos_hint: {"x": 0.1, "y": 0.58}
+            on_press: root.ids.urgency_lvl2.state = 'down'
+        CheckBox:
+            id: urgency_lvl2
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.125, "y": 0.53}
+            group: 'urgency'
+            color: 'black'
+        PicButton:
+            source: "ICONS/Urgency/Urgency3.png"
+            size_hint_y: 0.10
+            size_hint_x: 0.10
+            pos_hint: {"x": 0.18, "y": 0.58}
+            on_press: root.ids.urgency_lvl3.state = 'down'
+        CheckBox:
+            id: urgency_lvl3
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.205, "y": 0.53}
+            group: 'urgency'
+            color: 'black'
+        PicButton:
+            source: "ICONS/Urgency/Urgency4.png"
+            size_hint_y: 0.10
+            size_hint_x: 0.10
+            pos_hint: {"x": 0.26, "y": 0.58}
+            on_press: root.ids.urgency_lvl4.state = 'down'
+        CheckBox:
+            id: urgency_lvl4
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.285, "y": 0.53}
+            group: 'urgency'
+            color: 'black'
+        PicButton:
+            source: "ICONS/Urgency/Urgency5.png"
+            size_hint_y: 0.10
+            size_hint_x: 0.10
+            pos_hint: {"x": 0.34, "y": 0.58}
+            on_press: root.ids.urgency_lvl5.state = 'down'
+        CheckBox:
+            id: urgency_lvl5
+            size_hint: (0.03, 0.05)
+            pos_hint: {"x": 0.375, "y": 0.53}
+            group: 'urgency'
+            color: 'black'
+
+        # Symptoms
         Label:
             text: 'Presenta algunos de estos sintomas?'
             pos_hint: {"x": 0.50, "y": 0.755}
@@ -196,3 +276,44 @@
             group: 'perdida_olfato_gusto'
             color: 'black'
             active: False
+        PicButton:
+            source: "ICONS/go_back.png"
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            pos_hint: {"x": -0.01, "y": 0.005}
+            on_press: root.manager.SMMainScreen()
+        #Service Required
+        PicButton:
+            source: "ICONS/ServiceRequired/ServiceRequired1.png"
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            pos_hint: {"x": 0.00, "y": 0.20}
+            on_press: root.ids.service1.state = 'down'
+        PicButton:
+            source: "ICONS/ServiceRequired/ServiceRequired2.png"
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            pos_hint: {"x": 0.20, "y": 0.20}
+            on_press: root.ids.service2.state = 'down'
+        CheckBox:
+            id: service1
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.10, "y": 0.12}
+            group: 'service'
+            color: 'black'
+        CheckBox:
+            id: service2
+            size_hint: (0.05, 0.05)
+            pos_hint: {"x": 0.30, "y": 0.12}
+            group: 'service'
+            color: 'black'
+
+        #Submit
+        Button:
+            id: submit_form
+            text: 'Submit'
+            size_hint: (0.10, 0.10)
+            pos_hint: {"x": 0.45, "y": 0.005}
+            on_press:
+                EntryForm.save_form()
+                root.manager.SMMainScreen()

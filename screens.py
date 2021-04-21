@@ -76,7 +76,17 @@ class EntryForm(Screen):
 
 class Appointments(Screen):
     '''APPOINTMENTS SCREEN'''
-    pass
+    def clear(self):
+        self.ids.fiebre_no.state = 'down'
+        self.ids.tos_no.state = 'down'
+        self.ids.diff_resp_no.state = 'down'
+        self.ids.escalofrios_no.state = 'down'
+        self.ids.temblores_no.state = 'down'
+        self.ids.dolor_muscular_no.state = 'down'
+        self.ids.dolor_cabeza_no.state = 'down'
+        self.ids.dolor_garganta_no.state = 'down'
+        self.ids.perdida_olfato_gusto_no.state = 'down'
+
 
 class Survey(Screen):
     '''Survey screen'''
