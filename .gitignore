@@ -57,7 +57,7 @@ docs/_build/
 target/
 
 # VS Code
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
