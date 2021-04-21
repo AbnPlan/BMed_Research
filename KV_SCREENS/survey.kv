@@ -15,6 +15,7 @@
                 font_size: 50
                 color: 0,0,0,1
                 size_hint: 0.20, 0.20
+                halign: "center"
             BoxLayout:
                 id: lt0
                 orientation: 'vertical'
@@ -497,9 +498,10 @@
                 orientation: 'vertical'
                 Label:
                     text: '7. ¿Tiene algún comentario adicional para nosotros?'
+                    halign: "center"
                     font_size: 18
                     color: 0,0,0,1
-                TextInput:
+                MDTextField:
                     id: comments
                     hint_text: ''
                     multiline: True
@@ -507,11 +509,9 @@
             FloatLayout:
                 size_hint: 0.2, 0.5
 
-            Button:
+            MDRaisedButton:
                 text: 'Submit'
-                color: 0,0,0,1
-                background_normal: ''
-                background_color: (0.62, 0.76, 0.90, 1.0)
+                md_bg_color: 0, 0, 1, 1
                 on_release: pass
                 size_hint: .1, .2
 

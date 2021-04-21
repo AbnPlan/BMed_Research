@@ -21,34 +21,28 @@
             pos_hint: {"x": -0.01, "y": 0.005}
             on_press: root.remove() if root.state else root.manager.SMMainScreen()
         
-        Button:
+        MDRaisedButton:
             id: btn_question_1
             text: '¿Cómo protegerse si va a salir?'
-            color: 0,0,0,1
+            md_bg_color: 0, 0, 1, 1
             size_hint: (0.8, 0.1)
             pos_hint: {"x": 0.1, "y": 0.6}
-            background_normal: ''
-            background_color: (0.62, 0.76, 0.90, 1.0)
             on_press: root.add(root.ids.slide_1)
 
-        Button:
+        MDRaisedButton:
             id: btn_question_2
             text: '¿Cómo sobrellevar el estrés?'
-            color: 0,0,0,1
+            md_bg_color: 0, 0, 1, 1
             size_hint: (0.8, 0.1)
             pos_hint: {"x": 0.1, "y": 0.4}
-            background_normal: ''
-            background_color: (0.62, 0.76, 0.90, 1.0)
             on_press: root.add(root.ids.slide_2)
 
-        Button:
+        MDRaisedButton:
             id: btn_question_3
             text: '¿Qué hacer si se enferma?'
-            color: 0,0,0,1
+            md_bg_color: 0, 0, 1, 1
             size_hint: (0.8, 0.1)
             pos_hint: {"x": 0.1, "y": 0.2}
-            background_normal: ''
-            background_color: (0.62, 0.76, 0.90, 1.0)
             on_press: root.add(root.ids.slide_3)
 
         Carousel:

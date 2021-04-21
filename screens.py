@@ -1,7 +1,7 @@
 import db_manager as db
 
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.button import ButtonBehavior
+from kivymd.uix.button import ButtonBehavior
 from kivy.uix.image import Image
 
 class MyScreenManager(ScreenManager):
