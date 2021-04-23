@@ -114,10 +114,76 @@ class Appointments(Screen):
         self.ids.dolor_cabeza_no.state = 'down'
         self.ids.dolor_garganta_no.state = 'down'
         self.ids.perdida_olfato_gusto_no.state = 'down'
-        self.ids.perdida_olfato_gusto_no.state = 'down'
         self.ids.urgency_lvl1.state = 'down'
         self.ids.service2.state = 'down'
         self.ids.a_full_name.text = ''
+    
+    def save_form(self):
+        '''Save form into Database'''
+        db_connection = db.db_connection()
+
+        if self.ids.urgency_lvl1.state == 'down':
+            u_l = 1
+        elif self.ids.urgency_lvl2.state == 'down':
+            u_l = 2
+        elif self.ids.urgency_lvl3.state == 'down':
+            u_l = 3
+        elif self.ids.urgency_lvl4.state == 'down':
+            u_l = 4
+        else:
+            u_l = 5
+
+        if self.ids.service2.state == 'down':
+            service = 'Pediatria'
+        else:
+            service = 'Sala de Emergencias'
+
+        Fiebre = 'No'
+        Tos = 'No'
+        DiffResp = 'No'
+        Escalofrios = 'No'
+        Temblores = 'No'
+        DolorMuscular = 'No'
+        DolorCabeza = 'No'
+        DolorGarganta = 'No'
+        PerdidaOlfatoGusto = 'No'
+
+        if self.ids.fiebre_yes.state == 'down':
+            Fiebre = 'Yes'
+        if self.ids.tos_yes.state == 'down':
+            Tos = 'Yes'
+        if self.ids.diff_resp_yes.state == 'down':
+            DiffResp = 'Yes'
+        if self.ids.escalofrios_yes.state == 'down':
+            Escalofrios = 'Yes'
+        if self.ids.temblores_yes.state == 'down':
+            Temblores = 'Yes'
+        if self.ids.dolor_muscular_yes.state == 'down':
+            DolorMuscular = 'Yes'
+        if self.ids.dolor_cabeza_yes.state == 'down':
+            DolorCabeza = 'Yes'
+        if self.ids.dolor_garganta_yes.state == 'down':
+            DolorGarganta = 'Yea'
+        if self.ids.perdida_olfato_gusto_yes.state == 'down':
+            PerdidaOlfatoGusto = 'Yes'
+
+        db.insert_appointment(
+            db_connection,
+            self.ids.a_full_name.text,
+            u_l,
+            service, 
+            Fiebre,
+            Tos,
+            DiffResp,
+            Escalofrios,
+            Temblores,
+            DolorMuscular,
+            DolorCabeza,
+            DolorGarganta,
+            PerdidaOlfatoGusto
+        )
+
+        db_connection.close()
         
 
 
