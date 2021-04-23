@@ -27,8 +27,25 @@ def insert_patient(db_name, name, phone, address1, address2, town, country, zip_
     '''
     execute_query(db_name, insert_data)
 
+
+def insert_appointment(db_name, name, emergency, service, 
+                    Fiebre,
+                    Tos,
+                    DiffResp,
+                    Escalofrios,
+                    Temblores,
+                    DolorMuscular,
+                    DolorCabeza,
+                    DolorGarganta,
+                    PerdidaOlfatoGusto):
+    insert_data = f'''
+    INSERT INTO appointment
+    VALUES ('{name}','{emergency}','{service}','{Fiebre}','{Tos}','{DiffResp}','{Escalofrios}','{Temblores}', '{DolorMuscular}', '{DolorCabeza}', '{DolorGarganta}', '{PerdidaOlfatoGusto}');
+    '''
+    execute_query(db_name, insert_data)
+
 def db_connection():
-    connection = create_connection("DATABASE\\patient_info.db")
+    connection = create_connection("Database.db")
     create_users_table = """
 	CREATE TABLE IF NOT EXISTS patient (
 	name TEXT NOT NULL,
@@ -42,15 +59,19 @@ def db_connection():
     );
     """
     create_apointments_table = """
-	CREATE TABLE IF NOT EXISTS appointment (
-	name TEXT NOT NULL,
-	phone TEXT NOT NULL,
-	adress1 TEXT NOT NULL,
-	adress2 TEXT,
-    town TEXT NOT NULL,
-    country TEXT NOT NULL,
-    zip_code TEXT NOT NULL,
-    health_insurance TEXT NOT NULL
+    CREATE TABLE IF NOT EXISTS appointment (
+    name TEXT NOT NULL,
+    emergency INT,
+    service TEXT NOT NULL,
+    fiebre TEXT NOT NULL,
+    Tos TEXT NOT NULL,
+    diff_resp TEXT NOT NULL,
+    escalofrios TEXT NOT NULL,
+    temblores TEXT NOT NULL,
+    dolor_muscular TEXT NOT NULL,
+    dolor_cabeza TEXT NOT NULL,
+    dolor_garganta TEXT NOT NULL,
+    perdida_olfato_gusto TEXT NOT NULL
     );
     """
 
