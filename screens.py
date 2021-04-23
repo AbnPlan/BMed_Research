@@ -1,42 +1,8 @@
+
+from kivy.uix.screenmanager import Screen
+from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.popup import Popup
 import db_manager as db
-
-from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.button import ButtonBehavior
-from kivy.uix.image import Image
-
-class MyScreenManager(ScreenManager):
-    def __init__(self, **kwargs):
-        super(MyScreenManager, self).__init__(**kwargs)
-        self.add_widget(MenuScreen(name='menu'))
-        self.add_widget(EntryForm(name='entry'))
-        self.add_widget(Appointments(name='appointments'))
-        self.add_widget(Survey(name='survey'))
-        self.add_widget(Info(name='info'))
-
-    def SMMainScreen(self):
-        '''Change screen to Main Menu'''
-        self.current = 'menu'
-
-    def SMEntry(self):
-        '''Change screen to Entry'''
-        self.current = 'entry'
-
-    def SMAppointments(self):
-        '''Change screen to Appointments'''
-        self.current = 'appointments'
-
-    def SMsurvey(self):
-        '''Change screen to Survey'''
-        self.current = 'survey'
-
-    def SMInfo(self):
-        '''Change screen to Info'''
-        self.current = 'info'
-
-
-class PicButton(ButtonBehavior, Image):
-    '''Class that makes it possible to have an Image that works like a Button'''
-    pass
 
 class MenuScreen(Screen):
     '''Main menu screen'''
@@ -61,7 +27,7 @@ class EntryForm(Screen):
         db_connection = db.db_connection()
         db.insert_data(
             db_connection, 
-            self.ids.full_name.text,
+            self.ids.ef_full_name.text,
             self.ids.phone_number.text,
             self.ids.address_line1.text,
             self.ids.address_line2.text,
@@ -72,10 +38,60 @@ class EntryForm(Screen):
         )
 
         db_connection.close()
+    
+    def show_popup(self):
+        if (
+            self.ids.ef_full_name.text=='' or
+            self.ids.phone_number.text=='' or
+            self.ids.address_line1.text=='' or
+            self.ids.town.text=='' or
+            self.ids.country.text=='' or
+            self.ids.zip_code.text=='' or
+            (self.ids.health_insurance.text == '' and self.ids.other.state == 'down') or
+            (self.ids.other.state == 'normal' and self.ids.tripleS.state == 'normal' and 
+            self.ids.reforma.state == 'normal' and self.ids.mcs.state == 'normal' and 
+            self.ids.humana.state == 'normal')
+            ):
+            show = Fail()
+            popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
+            popup_window.open()
+            return 0
 
+        show = Success()
+        popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
+        popup_window.open()
+        return 1
 
 class Appointments(Screen):
     '''APPOINTMENTS SCREEN'''
+    def show_popup(self):
+        if (
+            (self.ids.fiebre_no.state == 'normal' and self.ids.fiebre_yes.state == 'normal') or
+            (self.ids.tos_no.state == 'normal' and self.ids.tos_yes.state == 'normal') or
+            (self.ids.diff_resp_no.state == 'normal' and self.ids.diff_resp_yes.state == 'normal') or
+            (self.ids.escalofrios_no.state == 'normal' and self.ids.escalofrios_yes.state == 'normal') or
+            (self.ids.temblores_no.state == 'normal' and self.ids.temblores_yes.state == 'normal') or
+            (self.ids.dolor_muscular_no.state == 'normal' and self.ids.dolor_muscular_yes.state == 'normal') or
+            (self.ids.dolor_cabeza_no.state == 'normal' and self.ids.dolor_cabeza_yes.state == 'normal') or
+            (self.ids.dolor_garganta_no.state == 'normal' and self.ids.dolor_garganta_yes.state == 'normal') or
+            (self.ids.perdida_olfato_gusto_no.state == 'normal'and self.ids.perdida_olfato_gusto_yes.state == 'normal') or
+            (self.ids.service1.state == 'normal' and self.ids.service2.state == 'normal') or
+            (self.ids.urgency_lvl1.state == 'normal' and self.ids.urgency_lvl2.state == 'normal' and
+             self.ids.urgency_lvl3.state == 'normal' and self.ids.urgency_lvl4.state == 'normal' and
+             self.ids.urgency_lvl5.state == 'normal') or 
+            (self.ids.a_full_name.text == '')
+            ):
+            show = Fail()
+            popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
+            popup_window.open()
+            return 0
+
+        show = Success()
+        popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
+        popup_window.open()
+        return 1
+        
+
     def clear(self):
         self.ids.fiebre_no.state = 'down'
         self.ids.tos_no.state = 'down'
@@ -86,6 +102,11 @@ class Appointments(Screen):
         self.ids.dolor_cabeza_no.state = 'down'
         self.ids.dolor_garganta_no.state = 'down'
         self.ids.perdida_olfato_gusto_no.state = 'down'
+        self.ids.perdida_olfato_gusto_no.state = 'down'
+        self.ids.urgency_lvl1.state = 'down'
+        self.ids.service2.state = 'down'
+        self.ids.a_full_name.text = ''
+        
 
 
 class Survey(Screen):
@@ -124,4 +145,11 @@ class Info(Screen):
         self.ids.layout.add_widget(self.ids.btn_question_3)
         self.ids.layout.add_widget(self.ids.page_label)
 
-        self.state = False
+        self.state = False    
+
+class Fail(FloatLayout):
+    pass
+
+
+class Success(FloatLayout):
+    pass
