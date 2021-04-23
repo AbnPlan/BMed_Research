@@ -1,9 +1,9 @@
 #:kivy 2.0.0
 
 <EntryForm>:
+    id: EntryForm
     on_enter: root.clear_text()
     FloatLayout:
-        id: EntryForm
         Label:
             text: "Forma de entrada"
             font_size: 50
@@ -23,8 +23,7 @@
             size_hint: (0.10, 0.10)
             pos_hint: {"x": 0.45, "y": 0.005}
             on_press:
-                EntryForm.save_form()
-                root.manager.SMMainScreen()
+                if root.show_popup(): EntryForm.save_form(); root.manager.SMMainScreen()
         Label:
             text: 'Nombre:'
             pos_hint: {"x": 0.025, "y": 0.78}
