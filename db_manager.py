@@ -20,7 +20,7 @@ def execute_query(db_name, query):
         print(f"The error '{e}' occurred")
 
 
-def insert_data(db_name, name, phone, address1, address2, town, country, zip_code, health_insurance):
+def insert_patient(db_name, name, phone, address1, address2, town, country, zip_code, health_insurance):
     insert_data = f'''
     INSERT INTO patient
     VALUES ('{name}','{phone}','{address1}','{address2}','{town}','{country}','{zip_code}', '{health_insurance}');
@@ -41,6 +41,34 @@ def db_connection():
     health_insurance TEXT NOT NULL
     );
     """
+    create_apointments_table = """
+	CREATE TABLE IF NOT EXISTS appointment (
+	name TEXT NOT NULL,
+	phone TEXT NOT NULL,
+	adress1 TEXT NOT NULL,
+	adress2 TEXT,
+    town TEXT NOT NULL,
+    country TEXT NOT NULL,
+    zip_code TEXT NOT NULL,
+    health_insurance TEXT NOT NULL
+    );
+    """
+
+    create_survey_table = """
+	CREATE TABLE IF NOT EXISTS survey (
+	name TEXT NOT NULL,
+	phone TEXT NOT NULL,
+	adress1 TEXT NOT NULL,
+	adress2 TEXT,
+    town TEXT NOT NULL,
+    country TEXT NOT NULL,
+    zip_code TEXT NOT NULL,
+    health_insurance TEXT NOT NULL
+    );
+    """
+
     execute_query(connection, create_users_table)
+    execute_query(connection, create_apointments_table)
+    execute_query(connection, create_survey_table)
 
     return connection

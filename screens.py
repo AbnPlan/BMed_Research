@@ -25,7 +25,19 @@ class EntryForm(Screen):
     def save_form(self):
         '''Save form into Database'''
         db_connection = db.db_connection()
-        db.insert_data(
+
+        if self.ids.tripleS.state == 'down':
+            h_i = 'Triple S'
+        elif self.ids.reforma.state == 'down':
+            h_i = 'Reforma'
+        elif self.ids.mcs.state == 'down':
+            h_i = 'MCS'
+        elif self.ids.humana.state == 'down':
+            h_i = 'Humana'
+        else:
+            h_i = self.ids.health_insurance.text
+
+        db.insert_patient(
             db_connection, 
             self.ids.ef_full_name.text,
             self.ids.phone_number.text,
@@ -34,7 +46,7 @@ class EntryForm(Screen):
             self.ids.town.text,
             self.ids.country.text,
             self.ids.zip_code.text,
-            self.ids.health_insurance.text
+            h_i
         )
 
         db_connection.close()
