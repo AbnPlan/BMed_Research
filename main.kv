@@ -1,16 +1,19 @@
 #:kivy 2.0.0
 
 <MyScreenManager>:
-    pass
+
+<MDLabelCenter@MDLabel>:
+    halign: "center"   
 
 <Fail>:
-    Label:
+    MDLabelCenter:
         text: '\n\nFalta informacion para completar forma'
         size_hint: .6, .2
         pos_hint: {'x': 0.2, 'top': 1}
 
 <Success>:
-    Label:
+    MDLabelCenter:
         text: '\n\nForma completada y guardada'
         size_hint: .6, .1
         pos_hint: {'x': 0.2, 'top': 1}
+

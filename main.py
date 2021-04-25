@@ -29,6 +29,5 @@ class MainApp(MDApp):
         self.theme_cls.primary_palette = "LightBlue"
         return MyScreenManager(transition = RiseInTransition())
 
-
 if __name__ == "__main__":
     MainApp().run()
