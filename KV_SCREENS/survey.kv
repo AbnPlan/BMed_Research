@@ -46,19 +46,15 @@
                     CheckBox:
                         id: q_0_0
                         group: 'q_0'
-                        
                     CheckBox:
                         id: q_0_1
                         group: 'q_0'
-                        
                     CheckBox:
                         id: q_0_2
                         group: 'q_0'
-                        
                     CheckBox:
                         id: q_0_3
                         group: 'q_0'
-                        
                     CheckBox:
                         id: q_0_4
                         group: 'q_0'
@@ -114,27 +110,20 @@
                     CheckBox:
                         id: q_1_0
                         group: 'q_1'
-                        
                     CheckBox:
                         id: q_1_1
                         group: 'q_1'
-                        
                     CheckBox:
                         id: q_1_2
                         group: 'q_1'
-                        
                     CheckBox:
                         id: q_1_3
                         group: 'q_1'
-                        
 
                 BoxLayout:
                     orientation: 'horizontal'
                     MDLabelCenter:
                         text: 'Existen Mejores Opciones'
-                        font_size: 18
-                    MDLabelCenter:
-                        text: ''
                         font_size: 18
                     MDLabelCenter:
                         text: ''
@@ -174,15 +163,12 @@
                     CheckBox:
                         id: q_2_0
                         group: 'q_2'
-                        
                     CheckBox:
                         id: q_2_1
                         group: 'q_2'
-                        
                     CheckBox:
                         id: q_2_2
                         group: 'q_2'
-                        
                     CheckBox:
                         id: q_2_3
                         group: 'q_2'
@@ -200,13 +186,9 @@
                         text: ''
                         font_size: 18
                     MDLabelCenter:
-                        text: ''
-                        font_size: 18
-                    MDLabelCenter:
                         text: 'Alta'
                         font_size: 18
                         
-
             BoxLayout:
                 id: lt3
                 orientation: 'vertical'
@@ -235,53 +217,52 @@
                     CheckBox:
                         id: q_3_0
                         group: 'q_3'
-                        
                     CheckBox:
                         id: q_3_1
                         group: 'q_3'
-                        
                     CheckBox:
                         id: q_3_2
                         group: 'q_3'
-                        
                     CheckBox:
                         id: q_3_3
                         group: 'q_3'
-                        
 
                 BoxLayout:
                     orientation: 'horizontal'
                     MDLabelCenter:
                         text: 'No probable'
                         font_size: 18
-                        
                     MDLabelCenter:
                         text: ''
                         font_size: 18
-                        
                     MDLabelCenter:
                         text: ''
                         font_size: 18
-                        
-                    MDLabelCenter:
-                        text: ''
-                        font_size: 18
-                        
                     MDLabelCenter:
                         text: 'Muy probable'
                         font_size: 18
-                        
 
+            BoxLayout:
+                id: lt6
+                orientation: 'vertical'
+                MDLabelCenter:
+                    text: '5. ¿Tiene algún comentario adicional para nosotros?'
+                    font_size: 18
+                    
+                TextInput:
+                    id: comments
+                    hint_text: ''
+                    multiline: True
+            
             BoxLayout:
                 orientation: 'vertical'
                 id: lt4
 
                 MDLabelCenter:
                     text:
-                        '4. ¿Cómo calificaría nuestro sistema en las siguientes áreas? '
+                        '6. ¿Cómo calificaría nuestro sistema en las siguientes áreas? '
                     font_size: 20
                     
-
                 GridLayout:
                     cols: 5
                     rows: 5
@@ -290,154 +271,111 @@
                     MDLabelCenter:
                         text: ''
                         font_size: 18
-                        
-
                     MDLabelCenter:
                         text: 'Insatisfecho'
                         font_size: 18
-                        
-
                     MDLabelCenter:
                         text: 'Neutro'
                         font_size: 18
-                        
-
                     MDLabelCenter:
                         text: 'Satisfecho'
                         font_size: 18
-                        
-
                     MDLabelCenter:
                         text: 'Muy Satisfecho'
                         font_size: 18
-                        
-
                     MDLabelCenter:
                         text: 'Calidad'
                         font_size: 18
-                        
 
                     CheckBox:
                         id: rating_quality_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                        
-
                     CheckBox:
                         id: rating_quality_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                        
-
                     CheckBox:
                         id: rating_quality_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                        
-
                     CheckBox:
                         id: rating_quality_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
                         
-
                     MDLabelCenter:
                         text: 'Atractivo Visual'
                         font_size: 18
                         
-
                     CheckBox:
                         id: rating_visual_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                        
-
                     CheckBox:
                         id: rating_visual_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                        
-
                     CheckBox:
                         id: rating_visual_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                        
-
                     CheckBox:
                         id: rating_visual_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                        
 
                     MDLabelCenter:
                         text: 'Instrucciones de uso'
                         font_size: 18
                         
-
                     CheckBox:
                         id: rating_user_friendly_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                        
-
                     CheckBox:
                         id: rating_user_friendly_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                        
-
                     CheckBox:
                         id: rating_user_friendly_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                        
-
                     CheckBox:
                         id: rating_user_friendly_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                        
 
                     MDLabelCenter:
                         text: 'Funcionabilidad'
                         font_size: 18
                         
-
                     CheckBox:
                         id: rating_functionality_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                        
-
                     CheckBox:
                         id: rating_functionality_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                        
-
                     CheckBox:
                         id: rating_functionality_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                        
-
                     CheckBox:
                         id: rating_functionality_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
                         
-
             BoxLayout:
                 orientation: 'vertical'
                 id: lt5
 
                 MDLabelCenter:
                     text:
-                        '6. Por favor, marque de las áreas mencionadas cual le gustaría mejoraran.'
+                        '7. Por favor, marque de las áreas mencionadas cual le gustaría mejoraran.'
                     font_size: 18
                     
-
                 GridLayout:
                     cols: 4
                     rows: 4
@@ -446,106 +384,68 @@
                     MDLabelCenter:
                         text: ''
                         font_size: 18
-                        
-
                     MDLabelCenter:
                         text: 'Importante'
                         font_size: 18
-                        
-
                     MDLabelCenter:
                         text: 'Neutro'
                         font_size: 18
-                        
-
                     MDLabelCenter:
                         text: 'No es importante'
                         font_size: 18
-                        
-
                     MDLabelCenter:
                         text: 'Tamaño de la pantalla'
                         font_size: 18
                         
-
                     CheckBox:
                         id: improvement_size_1
                         size_hint: (0.05, 0.05)
                         group: 'improvement_size'
-                        
-
                     CheckBox:
                         id: improvement_size_2
                         size_hint: (0.05, 0.05)
                         group: 'improvement_size'
-                        
-
                     CheckBox:
                         id: improvement_size_3
                         size_hint: (0.05, 0.05)
                         group: 'improvement_size'
                         
-
                     MDLabelCenter:
                         text: 'Funcionamiento'
                         font_size: 18
-                        
 
                     CheckBox:
                         id: improvement_functionality_1
                         size_hint: (0.05, 0.05)
                         group: 'improvement_functionality'
-                        
-
                     CheckBox:
                         id: improvement_functionality_2
                         size_hint: (0.05, 0.05)
                         group: 'improvement_functionality'
-                        
-
                     CheckBox:
                         id: improvement_functionality_3
                         size_hint: (0.05, 0.05)
                         group: 'improvement_functionality'
                         
-
                     MDLabelCenter:
                         text: 'Calidad de la información'
                         font_size: 18
                         
-
                     CheckBox:
                         id: improvement_quality_1
                         size_hint: (0.05, 0.05)
                         group: 'improvement_quality'
-                        
-
                     CheckBox:
                         id: improvement_quality_2
                         size_hint: (0.05, 0.05)
                         group: 'improvement_quality'
-                        
-
                     CheckBox:
                         id: improvement_quality_3
                         size_hint: (0.05, 0.05)
                         group: 'improvement_quality'
                         
-
-            BoxLayout:
-                id: lt6
-                orientation: 'vertical'
-                MDLabelCenter:
-                    text: '7. ¿Tiene algún comentario adicional para nosotros?'
-                    font_size: 18
-                    
-                TextInput:
-                    id: comments
-                    hint_text: ''
-                    multiline: True
-
             FloatLayout:
-                size_hint: 0.2, 0.5
+                size_hint: .2, .25
 
             MDRaisedButton:
                 text: 'Submit'
