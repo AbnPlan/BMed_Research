@@ -1,6 +1,6 @@
 
 from kivy.uix.screenmanager import ScreenManager
-from kivy.uix.button import ButtonBehavior
+from kivymd.uix.button import ButtonBehavior
 from kivy.uix.image import Image
 from screens import *
 
