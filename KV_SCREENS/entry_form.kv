@@ -4,104 +4,102 @@
     id: EntryForm
     on_enter: root.clear_text()
     FloatLayout:
-        Label:
+        MDLabelCenter:
             text: "Forma de entrada"
             font_size: 50
-            color: 0,0,0,1
-            pos_hint: {"x":.42, "y":0.80}
-            size_hint: 0.20, 0.20
-            height: 100
+            pos_hint: {"x":0, "y": 0.4}
+
         PicButton:
             source: "ICONS/go_back.png"
             size_hint_y: 0.1
             size_hint_x: 0.1
             pos_hint: {"x": -0.01, "y": 0.005}
             on_press: root.manager.SMMainScreen()
-        Button:
+        MDRaisedButton:
             id: submit_form
             text: 'Submit'
             size_hint: (0.10, 0.10)
             pos_hint: {"x": 0.45, "y": 0.005}
             on_press:
                 if root.show_popup(): EntryForm.save_form(); root.manager.SMMainScreen()
-        Label:
+        MDLabelCenter:
             text: 'Nombre:'
             pos_hint: {"x": 0.025, "y": 0.78}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Telefono:'
             pos_hint: {"x": 0.023, "y": 0.70}
             size_hint: (.25, .05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Dirección:'
             pos_hint: {"x": 0.40, "y": 0.80}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Linea 1:'
             pos_hint: {"x": 0.40, "y": 0.75}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Linea 2:'
             pos_hint: {"x": 0.40, "y": 0.68}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Pueblo:'
             pos_hint: {"x": 0.40, "y": 0.58}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Pais:'
             pos_hint: {"x": 0.40, "y": 0.50}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Zip:'
             pos_hint: {"x": 0.60, "y": 0.58}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Seguro Medico:'
             pos_hint: {"x": 0.025, "y": 0.65}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Triple S'
             pos_hint: {"x": 0.05, "y": 0.62}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Reforma'
             pos_hint: {"x": 0.20, "y": 0.62}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'MCS'
             pos_hint: {"x": 0.05, "y": 0.56}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+            
+        MDLabelCenter:
             text: 'Humana'
             pos_hint: {"x": 0.20, "y": 0.56}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
+            
         TextInput:
             id: ef_full_name
             hint_text: 'Nombre'
@@ -151,33 +149,33 @@
             size_hint: (0.20, 0.05)
             pos_hint: {"x": 0.15, "y": 0.50}
             multiline: False
-        CheckBox:
+        CheckBoxBlack:
             id: tripleS
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.10, "y": 0.62}
             group: 'seguro'
-            color: 'black'
-        CheckBox:
+            
+        CheckBoxBlack:
             id: reforma
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.25, "y": 0.62}
             group: 'seguro'
-            color: 'black'
-        CheckBox:
+            
+        CheckBoxBlack:
             id: mcs
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.10, "y": 0.56}
             group: 'seguro'
-            color: 'black'
-        CheckBox:
+            
+        CheckBoxBlack:
             id: humana
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.25, "y": 0.56}
             group: 'seguro'
-            color: 'black'
-        CheckBox:
+            
+        CheckBoxBlack:
             id: other
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.10, "y": 0.50}
             group: 'seguro'
-            color: 'black'
+            

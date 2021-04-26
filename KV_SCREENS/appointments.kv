@@ -3,22 +3,19 @@
 <Appointments>:
     on_enter: root.clear()
     FloatLayout:
-        # Tittle
-        Label:
+        # Title
+        MDLabelCenter:
             text: "Citas"
             font_size: 50
-            color: 0,0,0,1
-            pos_hint: {"x":.42, "y":0.80}
-            size_hint: 0.20, 0.20
-            height: 100
+            pos_hint: {"x":0, "y": 0.4}
 
         # Name Info
-        Label:
+        MDLabelCenter:
             text: 'Nombre:'
             pos_hint: {"x": -0.05, "y": 0.78}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
+
         TextInput:
             id: a_full_name
             hint_text: 'Nombre'
@@ -27,254 +24,252 @@
             multiline: False
 
         # Urgency Level
-        Label:
+        MDLabelCenter:
             text: 'Nivel de emergencia:'
             pos_hint: {"x": -0.009, "y": 0.70}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
+
         PicButton:
             source: "ICONS/Urgency/Urgency1.png"
             size_hint_y: 0.10
             size_hint_x: 0.10
             pos_hint: {"x": 0.02, "y": 0.58}
             on_press: root.ids.urgency_lvl1.state = 'down'
-        CheckBox:
+        CheckBoxBlack:
             id: urgency_lvl1
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.045, "y": 0.53}
             group: 'urgency'
-            color: 'black'
+
         PicButton:
             source: "ICONS/Urgency/Urgency2.png"
             size_hint_y: 0.10
             size_hint_x: 0.10
             pos_hint: {"x": 0.1, "y": 0.58}
             on_press: root.ids.urgency_lvl2.state = 'down'
-        CheckBox:
+        CheckBoxBlack:
             id: urgency_lvl2
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.125, "y": 0.53}
             group: 'urgency'
-            color: 'black'
+
         PicButton:
             source: "ICONS/Urgency/Urgency3.png"
             size_hint_y: 0.10
             size_hint_x: 0.10
             pos_hint: {"x": 0.18, "y": 0.58}
             on_press: root.ids.urgency_lvl3.state = 'down'
-        CheckBox:
+        CheckBoxBlack:
             id: urgency_lvl3
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.205, "y": 0.53}
             group: 'urgency'
-            color: 'black'
+
         PicButton:
             source: "ICONS/Urgency/Urgency4.png"
             size_hint_y: 0.10
             size_hint_x: 0.10
             pos_hint: {"x": 0.26, "y": 0.58}
             on_press: root.ids.urgency_lvl4.state = 'down'
-        CheckBox:
+        CheckBoxBlack:
             id: urgency_lvl4
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.285, "y": 0.53}
             group: 'urgency'
-            color: 'black'
+
         PicButton:
             source: "ICONS/Urgency/Urgency5.png"
             size_hint_y: 0.10
             size_hint_x: 0.10
             pos_hint: {"x": 0.34, "y": 0.58}
             on_press: root.ids.urgency_lvl5.state = 'down'
-        CheckBox:
+        CheckBoxBlack:
             id: urgency_lvl5
             size_hint: (0.03, 0.05)
             pos_hint: {"x": 0.375, "y": 0.53}
             group: 'urgency'
-            color: 'black'
 
         # Symptoms
-        Label:
+        MDLabelCenter:
             text: 'Presenta algunos de estos sintomas?'
             pos_hint: {"x": 0.50, "y": 0.755}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Si'
             pos_hint: {"x": 0.70, "y": 0.755}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'No'
             pos_hint: {"x": 0.75, "y": 0.755}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Fiebre'
             pos_hint: {"x": 0.50, "y": 0.70}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Tos'
             pos_hint: {"x": 0.50, "y": 0.65}
             size_hint: (.25, .05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Dificultad para respirar (falta de aire)'
             pos_hint: {"x": 0.50, "y": 0.60}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Escalofríos continuos'
             pos_hint: {"x": 0.50, "y": 0.55}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Temblores'
             pos_hint: {"x": 0.50, "y": 0.50}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Dolor muscular'
             pos_hint: {"x": 0.50, "y": 0.45}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Dolor de cabeza'
             pos_hint: {"x": 0.50, "y": 0.40}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Dolor de garganta'
             pos_hint: {"x": 0.50, "y": 0.35}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        Label:
+
+        MDLabelCenter:
             text: 'Pérdida reciente del olfato o el gusto'
             pos_hint: {"x": 0.50, "y": 0.30}
             size_hint: (0.25, 0.05)
             font_size: 15
-            color: 0,0,0,1
-        CheckBox:
+
+        CheckBoxBlack:
             id: fiebre_yes
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.80, "y": 0.70}
             group: 'fiebre'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: fiebre_no
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.85, "y": 0.70}
             group: 'fiebre'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: tos_yes
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.80, "y": 0.65}
             group: 'tos'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: tos_no
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.85, "y": 0.65}
             group: 'tos'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: diff_resp_yes
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.80, "y": 0.60}
             group: 'diff_resp'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: diff_resp_no
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.85, "y": 0.60}
             group: 'diff_resp'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: escalofrios_yes
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.80, "y": 0.55}
             group: 'escalofrios'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: escalofrios_no
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.85, "y": 0.55}
             group: 'escalofrios'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: temblores_yes
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.80, "y": 0.50}
             group: 'temblores'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: temblores_no
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.85, "y": 0.50}
             group: 'temblores'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: dolor_muscular_yes
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.80, "y": 0.45}
             group: 'dolor_muscular'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: dolor_muscular_no
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.85, "y": 0.45}
             group: 'dolor_muscular'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: dolor_cabeza_yes
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.80, "y": 0.40}
             group: 'dolor_cabeza'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: dolor_cabeza_no
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.85, "y": 0.40}
             group: 'dolor_cabeza'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: dolor_garganta_yes
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.80, "y": 0.35}
             group: 'dolor_garganta'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: dolor_garganta_no
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.85, "y": 0.35}
             group: 'dolor_garganta'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: perdida_olfato_gusto_yes
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.80, "y": 0.30}
             group: 'perdida_olfato_gusto'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: perdida_olfato_gusto_no
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.85, "y": 0.30}
             group: 'perdida_olfato_gusto'
-            color: 'black'
             active: False
         PicButton:
             source: "ICONS/go_back.png"
@@ -295,25 +290,23 @@
             size_hint_x: 0.25
             pos_hint: {"x": 0.20, "y": 0.20}
             on_press: root.ids.service2.state = 'down'
-        CheckBox:
+        CheckBoxBlack:
             id: service1
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.10, "y": 0.12}
             group: 'service'
-            color: 'black'
-        CheckBox:
+
+        CheckBoxBlack:
             id: service2
             size_hint: (0.05, 0.05)
             pos_hint: {"x": 0.30, "y": 0.12}
             group: 'service'
-            color: 'black'
 
         #Submit
-        Button:
+        MDRaisedButton:
             id: submit_form
             text: 'Submit'
             size_hint: (0.10, 0.10)
             pos_hint: {"x": 0.45, "y": 0.005}
             on_press:
                 if root.show_popup(): root.save_form(); root.manager.SMMainScreen()
-

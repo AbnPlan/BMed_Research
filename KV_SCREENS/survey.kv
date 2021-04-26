@@ -10,508 +10,446 @@
             cols: 1
             size_hint_y: None
             height: 3000
-            Label:
+            MDLabelCenter:
                 text: "Survey"
                 font_size: 50
-                color: 0,0,0,1
-                size_hint: 0.20, 0.20
+                halign: "center"
+                pos_hint: {"x":0, "y": 0.4}
+                size_hint: (0.4, 0.2)
+
             BoxLayout:
                 id: lt0
                 orientation: 'vertical'
-                Label:
+                MDLabelCenter:
                     text: '1. ¿Cómo calificaría su experiencia general con el servicio?'
                     font_size: 20
-                    color: 0,0,0,1
+                    halign: "center"
 
                 BoxLayout:
-                    Label:
-                        text: 'a. Totalmente Satisfactoria'
+                    orientation: 'horizontal'
+                    MDLabelCenter:
+                        text: '1'
                         font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    MDLabelCenter:
+                        text: '2'
+                        font_size: 18
+                    MDLabelCenter:
+                        text: '3'
+                        font_size: 18
+                    MDLabelCenter:
+                        text: '4'
+                        font_size: 18
+                    MDLabelCenter:
+                        text: '5'
+                        font_size: 18
+                    
+                BoxLayout:
+                    orientation: 'horizontal'
+                    CheckBoxBlack:
                         id: q_0_0
                         group: 'q_0'
-                        color: 'black'
-                BoxLayout:
-                    orientation: 'horizontal'
-                    Label:
-                        text: 'b. Satisfactoria'
-                        font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_0_1
                         group: 'q_0'
-                        color: 'black'
-                BoxLayout:
-                    orientation: 'horizontal'
-                    Label:
-                        text: 'c. Neutral'
-                        color: 0,0,0,1
-                        font_size: 18
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_0_2
                         group: 'q_0'
-                        color: 'black'
-
-                BoxLayout:
-                    orientation: 'horizontal'
-                    Label:
-                        text: 'd. Insatisfactoria'
-                        font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_0_3
                         group: 'q_0'
-                        color: 'black'
+                    CheckBoxBlack:
+                        id: q_0_4
+                        group: 'q_0'
+                        
 
                 BoxLayout:
                     orientation: 'horizontal'
-                    Label:
-                        text: 'e. Totalmente Insatisfactoria'
+                    MDLabelCenter:
+                        text: 'Peor'
                         font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
-                        id: q_0_4
-                        group: 'q_0'
-                        color: 'black'
+                        
+                    MDLabelCenter:
+                        text: ''
+                        font_size: 18
+                        
+                    MDLabelCenter:
+                        text: ''
+                        font_size: 18
+                        
+                    MDLabelCenter:
+                        text: ''
+                        font_size: 18
+                        
+                    MDLabelCenter:
+                        text: 'Mejor'
+                        font_size: 18
+                        
             BoxLayout:
                 id: lt1
                 orientation: 'vertical'
-                Label:
+                MDLabelCenter:
                     text:
                         '2. ¿Considera que nuestro sistema satisface sus necesidades?'
                     font_size: 20
-                    color: 0,0,0,1
-
+                    
                 BoxLayout:
-                    Label:
-                        text:
-                            'a. Totalmente Satisfactoria'
+                    orientation: 'horizontal'
+                    MDLabelCenter:
+                        text: '1'
                         font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    MDLabelCenter:
+                        text: '2'
+                        font_size: 18
+                    MDLabelCenter:
+                        text: '3'
+                        font_size: 18
+                    MDLabelCenter:
+                        text: '4'
+                        font_size: 18
+                    
+                BoxLayout:
+                    orientation: 'horizontal'
+                    CheckBoxBlack:
                         id: q_1_0
                         group: 'q_1'
-                        color: 'black'
-                BoxLayout:
-                    orientation: 'horizontal'
-                    Label:
-                        text:
-                            'b. Satisfactoria'
-                        font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_1_1
                         group: 'q_1'
-                        color: 'black'
-                BoxLayout:
-                    orientation: 'horizontal'
-                    Label:
-                        text:
-                            'c. Neutral'
-                        font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_1_2
                         group: 'q_1'
-                        color: 'black'
+                    CheckBoxBlack:
+                        id: q_1_3
+                        group: 'q_1'
 
                 BoxLayout:
                     orientation: 'horizontal'
-                    Label:
-                        text:
-                            'd. Es útil, pero existen mejores opciones'
+                    MDLabelCenter:
+                        text: 'Existen Mejores Opciones'
                         font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
-                        id: q_1_3
-                        group: 'q_1'
-                        color: 'black'
+                    MDLabelCenter:
+                        text: ''
+                        font_size: 18
+                    MDLabelCenter:
+                        text: ''
+                        font_size: 18
+                    MDLabelCenter:
+                        text: 'Totalmente Satisfactoria'
+                        font_size: 18
 
             BoxLayout:
                 id: lt2
                 orientation: 'vertical'
-                Label:
+                MDLabelCenter:
                     text:
                         '3. ¿Como es la calidad de la información provista?'
                     font_size: 20
-                    color: 0,0,0,1
 
                 BoxLayout:
-                    Label:
-                        text:
-                            'a. Alta. La información es precisa y respondía \nmis dudas adecuadamente.'
+                    orientation: 'horizontal'
+                    MDLabelCenter:
+                        text: '1'
                         font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    MDLabelCenter:
+                        text: '2'
+                        font_size: 18
+                    MDLabelCenter:
+                        text: '3'
+                        font_size: 18
+                    MDLabelCenter:
+                        text: '4'
+                        font_size: 18
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    CheckBoxBlack:
                         id: q_2_0
                         group: 'q_2'
-                        color: 'black'
-                BoxLayout:
-                    orientation: 'horizontal'
-                    Label:
-                        text:
-                            'b. Buena. Me permitió conocer información general, \naunque aún tenía dudas.'
-                        font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_2_1
                         group: 'q_2'
-                        color: 'black'
-                BoxLayout:
-                    orientation: 'horizontal'
-                    Label:
-                        text:
-                            'c. Media. Pude conocer solo algunas características. '
-                        font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_2_2
                         group: 'q_2'
-                        color: 'black'
+                    CheckBoxBlack:
+                        id: q_2_3
+                        group: 'q_2'
 
                 BoxLayout:
                     orientation: 'horizontal'
-                    Label:
-                        text:
-                            'd. Baja. No me permite aclarar mis dudas. '
+                    MDLabelCenter:
+                        text: 'Baja'
                         font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
-                        id: q_2_3
-                        group: 'q_2'
-                        color: 'black'
+                    MDLabelCenter:
+                        text: ''
+                        font_size: 18
+                    MDLabelCenter:
+                        text: ''
+                        font_size: 18
+                    MDLabelCenter:
+                        text: 'Alta'
+                        font_size: 18
 
             BoxLayout:
                 id: lt3
                 orientation: 'vertical'
-                Label:
+                MDLabelCenter:
                     text:
                         '4. ¿Cuál es la probabilidad de que vuelva a utilizar nuestro sistema en el futuro?'
                     font_size: 20
-                    color: 0,0,0,1
 
                 BoxLayout:
-                    Label:
-                        text: 'a. Muy Probable'
+                    orientation: 'horizontal'
+                    MDLabelCenter:
+                        text: '1'
                         font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    MDLabelCenter:
+                        text: '2'
+                        font_size: 18
+                    MDLabelCenter:
+                        text: '3'
+                        font_size: 18
+                    MDLabelCenter:
+                        text: '4'
+                        font_size: 18
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    CheckBoxBlack:
                         id: q_3_0
                         group: 'q_3'
-                        color: 'black'
-                BoxLayout:
-                    orientation: 'horizontal'
-                    Label:
-                        text: 'b. Probable'
-                        font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_3_1
                         group: 'q_3'
-                        color: 'black'
-                BoxLayout:
-                    orientation: 'horizontal'
-                    Label:
-                        text: 'c. Poco Probable'
-                        font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_3_2
                         group: 'q_3'
-                        color: 'black'
+                    CheckBoxBlack:
+                        id: q_3_3
+                        group: 'q_3'
 
                 BoxLayout:
                     orientation: 'horizontal'
-                    Label:
-                        text: 'd. Nada Probable'
+                    MDLabelCenter:
+                        text: 'No probable'
                         font_size: 18
-                        color: 0,0,0,1
-                    CheckBox:
-                        id: q_3_3
-                        group: 'q_3'
-                        color: 'black'
+                    MDLabelCenter:
+                        text: ''
+                        font_size: 18
+                    MDLabelCenter:
+                        text: ''
+                        font_size: 18
+                    MDLabelCenter:
+                        text: 'Muy probable'
+                        font_size: 18
+
+            BoxLayout:
+                id: lt6
+                orientation: 'vertical'
+                MDLabelCenter:
+                    text: '5. ¿Tiene algún comentario adicional para nosotros?'
+                    font_size: 18
+
+                TextInput:
+                    id: comments
+                    hint_text: ''
+                    multiline: True
 
             BoxLayout:
                 orientation: 'vertical'
                 id: lt4
 
-                Label:
+                MDLabelCenter:
                     text:
-                        '4. ¿Cómo calificaría nuestro sistema en las siguientes áreas? '
+                        '6. ¿Cómo calificaría nuestro sistema en las siguientes áreas? '
                     font_size: 20
-                    color: 0,0,0,1
 
                 GridLayout:
                     cols: 5
                     rows: 5
                     spacing: 10
 
-                    Label:
-                        text: 'Leyenda'
+                    MDLabelCenter:
+                        text: ''
                         font_size: 18
-                        color: 0,0,0,1
-
-                    Label:
+                    MDLabelCenter:
                         text: 'Insatisfecho'
                         font_size: 18
-                        color: 0,0,0,1
-
-                    Label:
+                    MDLabelCenter:
                         text: 'Neutro'
                         font_size: 18
-                        color: 0,0,0,1
-
-                    Label:
+                    MDLabelCenter:
                         text: 'Satisfecho'
                         font_size: 18
-                        color: 0,0,0,1
-
-                    Label:
+                    MDLabelCenter:
                         text: 'Muy Satisfecho'
                         font_size: 18
-                        color: 0,0,0,1
-
-                    Label:
+                    MDLabelCenter:
                         text: 'Calidad'
                         font_size: 18
-                        color: 0,0,0,1
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_quality_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_quality_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_quality_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_quality_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                        color: 'black'
 
-                    Label:
+                    MDLabelCenter:
                         text: 'Atractivo Visual'
                         font_size: 18
-                        color: 0,0,0,1
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_visual_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_visual_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_visual_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_visual_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                        color: 'black'
 
-                    Label:
+                    MDLabelCenter:
                         text: 'Instrucciones de uso'
                         font_size: 18
-                        color: 0,0,0,1
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_user_friendly_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_user_friendly_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_user_friendly_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_user_friendly_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                        color: 'black'
 
-                    Label:
+                    MDLabelCenter:
                         text: 'Funcionabilidad'
                         font_size: 18
-                        color: 0,0,0,1
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_functionality_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_functionality_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_functionality_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_functionality_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                        color: 'black'
 
             BoxLayout:
                 orientation: 'vertical'
                 id: lt5
 
-                Label:
+                MDLabelCenter:
                     text:
-                        '6. Por favor, marque de las áreas mencionadas cual le gustaría mejoraran.'
+                        '7. Por favor, marque de las áreas mencionadas cual le gustaría mejoraran.'
                     font_size: 18
-                    color: 0,0,0,1
 
                 GridLayout:
                     cols: 4
                     rows: 4
                     spacing: 10
 
-                    Label:
-                        text: 'Opciones'
+                    MDLabelCenter:
+                        text: ''
                         font_size: 18
-                        color: 0,0,0,1
-
-                    Label:
+                    MDLabelCenter:
                         text: 'Importante'
                         font_size: 18
-                        color: 0,0,0,1
-
-                    Label:
+                    MDLabelCenter:
                         text: 'Neutro'
                         font_size: 18
-                        color: 0,0,0,1
-
-                    Label:
+                    MDLabelCenter:
                         text: 'No es importante'
                         font_size: 18
-                        color: 0,0,0,1
-
-                    Label:
+                    MDLabelCenter:
                         text: 'Tamaño de la pantalla'
                         font_size: 18
-                        color: 0,0,0,1
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_size_1
                         size_hint: (0.05, 0.05)
                         group: 'improvement_size'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_size_2
                         size_hint: (0.05, 0.05)
                         group: 'improvement_size'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_size_3
                         size_hint: (0.05, 0.05)
                         group: 'improvement_size'
-                        color: 'black'
 
-                    Label:
+                    MDLabelCenter:
                         text: 'Funcionamiento'
                         font_size: 18
-                        color: 0,0,0,1
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_functionality_1
                         size_hint: (0.05, 0.05)
                         group: 'improvement_functionality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_functionality_2
                         size_hint: (0.05, 0.05)
                         group: 'improvement_functionality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_functionality_3
                         size_hint: (0.05, 0.05)
                         group: 'improvement_functionality'
-                        color: 'black'
 
-                    Label:
+                    MDLabelCenter:
                         text: 'Calidad de la información'
                         font_size: 18
-                        color: 0,0,0,1
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_quality_1
                         size_hint: (0.05, 0.05)
                         group: 'improvement_quality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_quality_2
                         size_hint: (0.05, 0.05)
                         group: 'improvement_quality'
-                        color: 'black'
-
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_quality_3
                         size_hint: (0.05, 0.05)
                         group: 'improvement_quality'
-                        color: 'black'
-
-            BoxLayout:
-                id: lt6
-                orientation: 'vertical'
-                Label:
-                    text: '7. ¿Tiene algún comentario adicional para nosotros?'
-                    font_size: 18
-                    color: 0,0,0,1
-                TextInput:
-                    id: comments
-                    hint_text: ''
-                    multiline: True
 
             FloatLayout:
-                size_hint: 0.2, 0.5
+                size_hint: .2, .25
 
-            Button:
+            MDRaisedButton:
                 text: 'Submit'
-                color: 0,0,0,1
-                background_normal: ''
-                background_color: (0.62, 0.76, 0.90, 1.0)
                 on_release: pass
                 size_hint: .1, .2
 

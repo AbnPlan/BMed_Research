@@ -4,14 +4,11 @@
     on_pre_enter: self.build()
     FloatLayout:
         id: layout
-        Label:
+        MDLabelCenter:
             id: page_label
             text: "Info"
             font_size: 50
-            color: 0,0,0,1
-            pos_hint: {"x":.42, "y":0.80}
-            size_hint: 0.20, 0.20
-            height: 100
+            pos_hint: {"x":0, "y": 0.4}
         
         PicButton:
             id: btn_back
@@ -21,34 +18,25 @@
             pos_hint: {"x": -0.01, "y": 0.005}
             on_press: root.remove() if root.state else root.manager.SMMainScreen()
         
-        Button:
+        MDRaisedButton:
             id: btn_question_1
             text: '¿Cómo protegerse si va a salir?'
-            color: 0,0,0,1
             size_hint: (0.8, 0.1)
             pos_hint: {"x": 0.1, "y": 0.6}
-            background_normal: ''
-            background_color: (0.62, 0.76, 0.90, 1.0)
             on_press: root.add(root.ids.slide_1)
 
-        Button:
+        MDRaisedButton:
             id: btn_question_2
             text: '¿Cómo sobrellevar el estrés?'
-            color: 0,0,0,1
             size_hint: (0.8, 0.1)
             pos_hint: {"x": 0.1, "y": 0.4}
-            background_normal: ''
-            background_color: (0.62, 0.76, 0.90, 1.0)
             on_press: root.add(root.ids.slide_2)
 
-        Button:
+        MDRaisedButton:
             id: btn_question_3
             text: '¿Qué hacer si se enferma?'
-            color: 0,0,0,1
             size_hint: (0.8, 0.1)
             pos_hint: {"x": 0.1, "y": 0.2}
-            background_normal: ''
-            background_color: (0.62, 0.76, 0.90, 1.0)
             on_press: root.add(root.ids.slide_3)
 
         Carousel:
@@ -57,47 +45,35 @@
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture1.png'
-                    # size_hint: (0.8, 0.1)
                     pos_hint: {"x": 0.25, "y": -0.001}
-                Label:
+                MDLabelCenter:
                     text: '''Opte por una mascarilla con dos o más \ncapas de telas lavables y respirables que \nse ajuste bien a los lados de su cara para \nprotegerse usted y proteger a otras \npersonas.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture2.png'
-                    # size_hint: (0.8, 0.1)
                     pos_hint: {"x": 0.25, "y": -0.001}
-                Label:
+                MDLabelCenter:
                     text: '''Evite los espacios cerrados tantos \ncomo sea posible, es posible que se \nle dificulte más mantener la \ndistancia de 6 pies en lugares\n cerrados.'''
-                    font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    font_size: 26                    
+                    pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture3.png'
-                    # size_hint: (0.8, 0.1)
                     pos_hint: {"x": 0.25, "y": -0.001}
-                Label:
+                MDLabelCenter:
                     text: '''Su riesgo de exposición al \nCOVID-19 aumenta con la \ncantidad de gente con la que \ntiene contacto.'''
-                    font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    font_size: 26                    
+                    pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture4.png'
-                    # size_hint: (0.8, 0.1)
                     pos_hint: {"x": 0.25, "y": -0.001}
-                Label:
+                MDLabelCenter:
                     text: '''Su riesgo de exposición al \nCOVID-19 aumenta con la \ncantidad de gente con la que \ntiene contacto.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":-.25, "y":0}
 
         Carousel:
             id: slide_2
@@ -105,14 +81,11 @@
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture5.png'
-                    # size_hint: (0.8, 0.1)
                     pos_hint: {"x": 0.25, "y": -0.001}
-                Label:
+                MDLabelCenter:
                     text: '''Practique yoga, escuche música, \ntrabaje en su jardín \npara relajarse.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture6.png'
@@ -121,12 +94,10 @@
                     size: 500, 500
                     allow_stretch: True
                     pos_hint: {"x": 0.45, "y": -0.001}
-                Label:
+                MDLabelCenter:
                     text: '''Busque formas nuevas de \nconectarse con familiares y \namigos, recibir apoyo y \ncompartir lo que siente.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture7.png'
@@ -134,12 +105,10 @@
                     size_hint_x: 1
                     allow_stretch: True                    
                     pos_hint: {"x": 0, "y": 0}
-                Label:
+                MDLabelCenter:
                     text: '''Coma sano y descanse bien.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":0.7, "y":0.5}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":0.25, "y":0}
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture8.png'
@@ -147,12 +116,10 @@
                     size_hint_x: 0.5
                     allow_stretch: True  
                     pos_hint: {"x": 0.48, "y": 0.25}
-                Label:
+                MDLabelCenter:
                     text: '''Lea, ejercítese o empiece con un \npasatiempo nuevo para \nmantenerse ocupado.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":-.25, "y":0}
 
         Carousel:
             id: slide_3
@@ -160,25 +127,19 @@
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture9.png'
-                    # size_hint: (0.8, 0.1)
                     pos_hint: {"x": 0.25, "y": -0.001}
-                Label:
+                MDLabelCenter:
                     text: '''Quédese en casa, excepto si \nnecesita atención médica. La \nmayoría de las personas con \nCOVID-19 tienen síntomas leves y \nse pueden recuperar en casa sin \natención médica. Si debe dejar el \naislamiento, use una mascarilla, \nmantenga una distancia de 6 pies \nde otras personas, lávese las \nmanos con frecuencia y limpie \ntodas las superficies que toca.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture10.png'
-                    # size_hint: (0.8, 0.1)
                     pos_hint: {"x": 0.25, "y": -0.001}
-                Label:
+                MDLabelCenter:
                     text: '''Aíslese de sus familiares para \nevitar contagiarlos y contagiar a las \npersonas con las que podrían tener \ncontacto, como abuelos.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture11.png'
@@ -186,12 +147,10 @@
                     size_hint_x: 0.5
                     allow_stretch: True
                     pos_hint: {"x": 0.49, "y": .25}
-                Label:
+                MDLabelCenter:
                     text: '''Incluso si no se siente \nenfermo, puede propagar \nel COVID-19 a otras \npersonas. Procure \nproteger a todos como si \nfueran las personas más \nfrágiles de su familia.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
                     source: 'SLIDE_IMG/Picture12.png'
@@ -199,9 +158,7 @@
                     size_hint_x: 0.5
                     allow_stretch: True                    
                     pos_hint: {"x": 0.49, "y": .25}
-                Label:
+                MDLabelCenter:
                     text: '''Si nota señales de advertencia \nde emergencia, como \ndificultad para respirar, dolor u \nopresión en el pecho, acuda de \ninmediato a un médico.'''
                     font_size: 26
-                    color: 0,0,0,1
-                    pos_hint: {"x":.2, "y":0.40}
-                    size_hint: 0.15, 0.20
+                    pos_hint: {"x":-.25, "y":0}
