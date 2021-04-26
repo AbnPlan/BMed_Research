@@ -12,9 +12,11 @@
             height: 3000
             MDLabelCenter:
                 text: "Survey"
-                font_size: 25
+                font_size: 50
                 halign: "center"
-                size_hint: 0.20, 0.20
+                pos_hint: {"x":0, "y": 0.4}
+                size_hint: (0.4, 0.2)
+
             BoxLayout:
                 id: lt0
                 orientation: 'vertical'
@@ -43,19 +45,19 @@
                     
                 BoxLayout:
                     orientation: 'horizontal'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_0_0
                         group: 'q_0'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_0_1
                         group: 'q_0'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_0_2
                         group: 'q_0'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_0_3
                         group: 'q_0'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_0_4
                         group: 'q_0'
                         
@@ -107,16 +109,16 @@
                     
                 BoxLayout:
                     orientation: 'horizontal'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_1_0
                         group: 'q_1'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_1_1
                         group: 'q_1'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_1_2
                         group: 'q_1'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_1_3
                         group: 'q_1'
 
@@ -160,16 +162,16 @@
 
                 BoxLayout:
                     orientation: 'horizontal'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_2_0
                         group: 'q_2'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_2_1
                         group: 'q_2'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_2_2
                         group: 'q_2'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_2_3
                         group: 'q_2'
 
@@ -213,16 +215,16 @@
 
                 BoxLayout:
                     orientation: 'horizontal'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_3_0
                         group: 'q_3'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_3_1
                         group: 'q_3'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_3_2
                         group: 'q_3'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: q_3_3
                         group: 'q_3'
 
@@ -286,19 +288,19 @@
                         text: 'Calidad'
                         font_size: 18
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_quality_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_quality_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_quality_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_quality_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_quality'
@@ -307,19 +309,19 @@
                         text: 'Atractivo Visual'
                         font_size: 18
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_visual_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_visual_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_visual_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_visual_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_visual'
@@ -328,19 +330,19 @@
                         text: 'Instrucciones de uso'
                         font_size: 18
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_user_friendly_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_user_friendly_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_user_friendly_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_user_friendly_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_user_friendly'
@@ -349,19 +351,19 @@
                         text: 'Funcionabilidad'
                         font_size: 18
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_functionality_1
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_functionality_2
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_functionality_3
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: rating_functionality_4
                         size_hint: (0.05, 0.05)
                         group: 'rating_functionality'
@@ -396,15 +398,15 @@
                         text: 'Tamaño de la pantalla'
                         font_size: 18
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_size_1
                         size_hint: (0.05, 0.05)
                         group: 'improvement_size'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_size_2
                         size_hint: (0.05, 0.05)
                         group: 'improvement_size'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_size_3
                         size_hint: (0.05, 0.05)
                         group: 'improvement_size'
@@ -413,15 +415,15 @@
                         text: 'Funcionamiento'
                         font_size: 18
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_functionality_1
                         size_hint: (0.05, 0.05)
                         group: 'improvement_functionality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_functionality_2
                         size_hint: (0.05, 0.05)
                         group: 'improvement_functionality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_functionality_3
                         size_hint: (0.05, 0.05)
                         group: 'improvement_functionality'
@@ -430,15 +432,15 @@
                         text: 'Calidad de la información'
                         font_size: 18
 
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_quality_1
                         size_hint: (0.05, 0.05)
                         group: 'improvement_quality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_quality_2
                         size_hint: (0.05, 0.05)
                         group: 'improvement_quality'
-                    CheckBox:
+                    CheckBoxBlack:
                         id: improvement_quality_3
                         size_hint: (0.05, 0.05)
                         group: 'improvement_quality'
