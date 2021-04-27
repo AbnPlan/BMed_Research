@@ -44,6 +44,17 @@ def insert_appointment(db_name, name, emergency, service,
     '''
     execute_query(db_name, insert_data)
 
+def insert_survey(
+    db_name, q1_exp_gen, q2_necessities, 
+    q3_info_quality, q4_use_sys, q5_ad_comment, 
+    q6_quality, q6_visual, q6_use,
+    q6_func, q7_screen, q7_funccionality, q7_info_quality):
+    insert_data = f'''
+    INSERT INTO survey
+    VALUES ('{q1_exp_gen}','{q2_necessities}','{q3_info_quality}','{q4_use_sys}','{q5_ad_comment}','{q6_quality}','{q6_visual}','{q6_use}', '{q6_func}', '{q7_screen}', '{q7_funccionality}', '{q7_info_quality}');
+    '''
+    execute_query(db_name, insert_data)
+
 def db_connection():
     connection = create_connection("Database.db")
     create_users_table = """
@@ -77,14 +88,18 @@ def db_connection():
 
     create_survey_table = """
 	CREATE TABLE IF NOT EXISTS survey (
-	name TEXT NOT NULL,
-	phone TEXT NOT NULL,
-	adress1 TEXT NOT NULL,
-	adress2 TEXT,
-    town TEXT NOT NULL,
-    country TEXT NOT NULL,
-    zip_code TEXT NOT NULL,
-    health_insurance TEXT NOT NULL
+    q1_exp_gen INT, 
+    q2_necessities INT, 
+    q3_info_quality INT, 
+    q4_use_sys INT, 
+    q5_ad_comment TEXT, 
+    q6_quality INT, 
+    q6_visual INT, 
+    q6_use INT,
+    q6_func INT, 
+    q7_screen INT, 
+    q7_funccionality INT, 
+    q7_info_quality INT
     );
     """
 
