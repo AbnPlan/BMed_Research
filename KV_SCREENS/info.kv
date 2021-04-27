@@ -9,7 +9,7 @@
             text: "Info"
             font_size: 50
             pos_hint: {"x":0, "y": 0.4}
-        
+
         PicButton:
             id: btn_back
             source: "ICONS/go_back.png"
@@ -17,7 +17,7 @@
             size_hint_x: 0.1
             pos_hint: {"x": -0.01, "y": 0.005}
             on_press: root.remove() if root.state else root.manager.SMMainScreen()
-        
+
         MDRaisedButton:
             id: btn_question_1
             text: '¿Cómo protegerse si va a salir?'
@@ -56,7 +56,7 @@
                     pos_hint: {"x": 0.25, "y": -0.001}
                 MDLabelCenter:
                     text: '''Evite los espacios cerrados tantos \ncomo sea posible, es posible que se \nle dificulte más mantener la \ndistancia de 6 pies en lugares\n cerrados.'''
-                    font_size: 26                    
+                    font_size: 26
                     pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
@@ -64,7 +64,7 @@
                     pos_hint: {"x": 0.25, "y": -0.001}
                 MDLabelCenter:
                     text: '''Su riesgo de exposición al \nCOVID-19 aumenta con la \ncantidad de gente con la que \ntiene contacto.'''
-                    font_size: 26                    
+                    font_size: 26
                     pos_hint: {"x":-.25, "y":0}
             FloatLayout:
                 Image:
@@ -103,7 +103,7 @@
                     source: 'SLIDE_IMG/Picture7.png'
                     size_hint_y: 1
                     size_hint_x: 1
-                    allow_stretch: True                    
+                    allow_stretch: True
                     pos_hint: {"x": 0, "y": 0}
                 MDLabelCenter:
                     text: '''Coma sano y descanse bien.'''
@@ -114,7 +114,7 @@
                     source: 'SLIDE_IMG/Picture8.png'
                     size_hint_y: 0.5
                     size_hint_x: 0.5
-                    allow_stretch: True  
+                    allow_stretch: True
                     pos_hint: {"x": 0.48, "y": 0.25}
                 MDLabelCenter:
                     text: '''Lea, ejercítese o empiece con un \npasatiempo nuevo para \nmantenerse ocupado.'''
