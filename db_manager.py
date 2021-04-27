@@ -88,18 +88,18 @@ def db_connection():
 
     create_survey_table = """
 	CREATE TABLE IF NOT EXISTS survey (
-    q1_exp_gen INT, 
-    q2_necessities INT, 
-    q3_info_quality INT, 
-    q4_use_sys INT, 
-    q5_ad_comment TEXT, 
-    q6_quality INT, 
-    q6_visual INT, 
-    q6_use INT,
-    q6_func INT, 
-    q7_screen INT, 
-    q7_funccionality INT, 
-    q7_info_quality INT
+    experiencia INT, 
+    necesidades INT, 
+    calidad_informacion INT, 
+    volveria INT, 
+    comentario TEXT, 
+    calidad INT, 
+    visual INT, 
+    facilidad_uso INT,
+    funcionalidad INT, 
+    pantalla_importancia INT, 
+    funcionamiento_importancia INT, 
+    calidad_importancia INT
     );
     """
 
