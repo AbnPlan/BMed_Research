@@ -453,8 +453,7 @@
             MDRaisedButton:
                 text: 'Submit'
                 on_release:
-                    root.save_survey()
-                    root.manager.SMMainScreen()
+                    if root.show_popup(): root.save_survey(); root.manager.SMMainScreen()
                 size_hint: .1, .2
 
     FloatLayout:
