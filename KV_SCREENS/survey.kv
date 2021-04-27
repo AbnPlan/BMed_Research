@@ -1,6 +1,7 @@
 #:kivy 2.0.0
 
 <Survey>:
+    on_pre_enter: root.clear_screen()
     ScrollView:
         do_scroll_x: False
         do_scroll_y: True
@@ -42,7 +43,7 @@
                     MDLabelCenter:
                         text: '5'
                         font_size: 18
-                    
+
                 BoxLayout:
                     orientation: 'horizontal'
                     CheckBoxBlack:
@@ -60,30 +61,30 @@
                     CheckBoxBlack:
                         id: q_0_4
                         group: 'q_0'
-                        
+
 
                 BoxLayout:
                     orientation: 'horizontal'
                     MDLabelCenter:
                         text: 'Peor'
                         font_size: 18
-                        
+
                     MDLabelCenter:
                         text: ''
                         font_size: 18
-                        
+
                     MDLabelCenter:
                         text: ''
                         font_size: 18
-                        
+
                     MDLabelCenter:
                         text: ''
                         font_size: 18
-                        
+
                     MDLabelCenter:
                         text: 'Mejor'
                         font_size: 18
-                        
+
             BoxLayout:
                 id: lt1
                 orientation: 'vertical'
@@ -91,7 +92,7 @@
                     text:
                         '2. ¿Considera que nuestro sistema satisface sus necesidades?'
                     font_size: 20
-                    
+
                 BoxLayout:
                     orientation: 'horizontal'
                     MDLabelCenter:
@@ -106,7 +107,7 @@
                     MDLabelCenter:
                         text: '4'
                         font_size: 18
-                    
+
                 BoxLayout:
                     orientation: 'horizontal'
                     CheckBoxBlack:
@@ -450,7 +451,9 @@
 
             MDRaisedButton:
                 text: 'Submit'
-                on_release: pass
+                on_release:
+                    root.save_survey()
+                    root.manager.SMMainScreen()
                 size_hint: .1, .2
 
     FloatLayout:
