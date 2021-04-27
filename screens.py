@@ -199,6 +199,7 @@ class Survey(Screen):
         self.ids.improvement_size_1.state = 'down'
         self.ids.improvement_functionality_1.state = 'down'
         self.ids.improvement_quality_1.state = 'down'
+        self.ids.scrollview.scroll_y = 1
 
     def save_survey(self):
         '''Save form into Database'''
