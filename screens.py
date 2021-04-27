@@ -102,7 +102,6 @@ class Appointments(Screen):
         popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
         popup_window.open()
         return 1
-        
 
     def clear(self):
         self.ids.fiebre_no.state = 'down'
@@ -171,7 +170,7 @@ class Appointments(Screen):
             db_connection,
             self.ids.a_full_name.text,
             u_l,
-            service, 
+            service,
             Fiebre,
             Tos,
             DiffResp,
@@ -184,12 +183,131 @@ class Appointments(Screen):
         )
 
         db_connection.close()
-        
-
 
 class Survey(Screen):
     '''Survey screen'''
-    pass
+    def clear_screen(self):
+        self.ids.q_0_0.state = 'down'
+        self.ids.q_1_0.state = 'down'
+        self.ids.q_2_0.state = 'down'
+        self.ids.q_3_0.state = 'down'
+        self.ids.comments.text = ''
+        self.ids.rating_quality_1.state = 'down'
+        self.ids.rating_visual_1.state = 'down'
+        self.ids.rating_user_friendly_1.state = 'down'
+        self.ids.rating_functionality_1.state = 'down'
+        self.ids.improvement_size_1.state = 'down'
+        self.ids.improvement_functionality_1.state = 'down'
+        self.ids.improvement_quality_1.state = 'down'
+
+    def save_survey(self):
+        '''Save form into Database'''
+        db_connection = db.db_connection()
+
+        if self.ids.q_0_0.state == 'down':
+            q0 = 1
+        elif self.ids.q_0_1.state == 'down':
+            q0 = 2
+        elif self.ids.q_0_2.state == 'down':
+            q0 = 3
+        elif self.ids.q_0_3.state == 'down':
+            q0 = 4
+        elif self.ids.q_0_4.state == 'down':
+            q0 = 5
+        
+        if self.ids.q_1_0.state == 'down':
+            q1 = 1
+        elif self.ids.q_1_1.state == 'down':
+            q1 = 2
+        elif self.ids.q_1_2.state == 'down':
+            q1 = 3
+        elif self.ids.q_1_3.state == 'down':
+            q1 = 4
+        
+        if self.ids.q_2_0.state == 'down':
+            q2 = 1
+        elif self.ids.q_2_1.state == 'down':
+            q2 = 2
+        elif self.ids.q_2_2.state == 'down':
+            q2 = 3
+        elif self.ids.q_2_3.state == 'down':
+            q2 = 4
+        
+        if self.ids.q_3_0.state == 'down':
+            q3 = 1
+        elif self.ids.q_3_1.state == 'down':
+            q3 = 2
+        elif self.ids.q_3_2.state == 'down':
+            q3 = 3
+        elif self.ids.q_3_3.state == 'down':
+            q3 = 4
+        
+        q4 = self.ids.comments.text
+
+        if self.ids.rating_quality_1.state == 'down':
+            rating_quality = 1
+        elif self.ids.rating_quality_2.state == 'down':
+            rating_quality = 2
+        elif self.ids.rating_quality_3.state == 'down':
+            rating_quality = 3
+        elif self.ids.rating_quality_4.state == 'down':
+            rating_quality = 4
+        
+        if self.ids.rating_visual_1.state == 'down':
+            rating_visual = 1
+        elif self.ids.rating_visual_2.state == 'down':
+            rating_visual = 2
+        elif self.ids.rating_visual_3.state == 'down':
+            rating_visual = 3
+        elif self.ids.rating_visual_4.state == 'down':
+            rating_visual = 4
+        
+        if self.ids.rating_user_friendly_1.state == 'down':
+            rating_user_friendly = 1
+        elif self.ids.rating_user_friendly_2.state == 'down':
+            rating_user_friendly = 2
+        elif self.ids.rating_user_friendly_3.state == 'down':
+            rating_user_friendly = 3
+        elif self.ids.rating_user_friendly_4.state == 'down':
+            rating_user_friendly = 4
+        
+        if self.ids.rating_functionality_1.state == 'down':
+            rating_functionality = 1
+        elif self.ids.rating_functionality_2.state == 'down':
+            rating_functionality = 2
+        elif self.ids.rating_functionality_3.state == 'down':
+            rating_functionality = 3
+        elif self.ids.rating_functionality_4.state == 'down':
+            rating_functionality = 4
+
+        if self.ids.improvement_size_1.state == 'down':
+            improvement_size = 1
+        elif self.ids.improvement_size_2.state == 'down':
+            improvement_size = 2
+        elif self.ids.improvement_size_3.state == 'down':
+            improvement_size = 3
+
+        if self.ids.improvement_functionality_1.state == 'down':
+            improvement_functionality = 1
+        elif self.ids.improvement_functionality_2.state == 'down':
+            improvement_functionality = 2
+        elif self.ids.improvement_functionality_3.state == 'down':
+            improvement_functionality = 3
+        
+        if self.ids.improvement_quality_1.state == 'down':
+            improvement_quality = 1
+        elif self.ids.improvement_quality_2.state == 'down':
+            improvement_quality = 2
+        elif self.ids.improvement_quality_3.state == 'down':
+            improvement_quality = 3
+        
+        db.insert_survey(db_connection, q0, q1, q2, q3, q4,
+                        rating_quality, rating_visual, rating_user_friendly,
+                        rating_functionality, improvement_size, improvement_functionality, 
+                        improvement_quality)
+        db_connection.close()
+
+
 
 class Info(Screen):
     '''Info screen'''
@@ -223,11 +341,10 @@ class Info(Screen):
         self.ids.layout.add_widget(self.ids.btn_question_3)
         self.ids.layout.add_widget(self.ids.page_label)
 
-        self.state = False    
+        self.state = False
 
 class Fail(FloatLayout):
     pass
-
 
 class Success(FloatLayout):
     pass
