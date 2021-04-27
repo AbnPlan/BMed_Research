@@ -12,12 +12,12 @@ from kivy.core.window import Window
 import VKeyboardPatch
 from kivy.uix.screenmanager import RiseInTransition
 
-Builder.load_file('main.kv')
-Builder.load_file('./KV_SCREENS/appointments.kv')
-Builder.load_file('./KV_SCREENS/entry_form.kv')
-Builder.load_file('./KV_SCREENS/info.kv')
-Builder.load_file('./KV_SCREENS/menu_screen.kv')
-Builder.load_file('./KV_SCREENS/survey.kv')
+Builder.load_file('./KV_FILES/main.kv')
+Builder.load_file('./KV_FILES/appointments.kv')
+Builder.load_file('./KV_FILES/entry_form.kv')
+Builder.load_file('./KV_FILES/info.kv')
+Builder.load_file('./KV_FILES/menu_screen.kv')
+Builder.load_file('./KV_FILES/survey.kv')
 
 Window.size = (1024, 600)
 Window.borderless = True
