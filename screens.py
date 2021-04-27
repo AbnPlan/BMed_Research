@@ -67,12 +67,12 @@ class EntryForm(Screen):
             show = Fail()
             popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
             popup_window.open()
-            return 0
+            return False
 
         show = Success()
         popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
         popup_window.open()
-        return 1
+        return True
 
 class Appointments(Screen):
     '''APPOINTMENTS SCREEN'''
@@ -96,12 +96,12 @@ class Appointments(Screen):
             show = Fail()
             popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
             popup_window.open()
-            return 0
+            return False
 
         show = Success()
         popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
         popup_window.open()
-        return 1
+        return True
 
     def clear(self):
         self.ids.fiebre_no.state = 'down'
@@ -307,6 +307,61 @@ class Survey(Screen):
                         rating_functionality, improvement_size, improvement_functionality, 
                         improvement_quality)
         db_connection.close()
+
+    def show_popup(self):
+        if (
+            (self.ids.q_0_0.state == 'normal' and
+            self.ids.q_0_1.state == 'normal' and
+            self.ids.q_0_2.state == 'normal' and
+            self.ids.q_0_3.state == 'normal' and
+            self.ids.q_0_4.state == 'normal') or
+            (self.ids.q_1_0.state == 'normal' and
+            self.ids.q_1_1.state == 'normal' and
+            self.ids.q_1_2.state == 'normal' and
+            self.ids.q_1_3.state == 'normal') or
+            (self.ids.q_2_0.state == 'normal' and
+            self.ids.q_2_1.state == 'normal' and
+            self.ids.q_2_2.state == 'normal' and
+            self.ids.q_2_3.state == 'normal') or
+            (self.ids.q_3_0.state == 'normal' and
+            self.ids.q_3_1.state == 'normal' and
+            self.ids.q_3_2.state == 'normal' and
+            self.ids.q_3_3.state == 'normal') or
+            (self.ids.rating_quality_1.state == 'normal' and
+            self.ids.rating_quality_2.state == 'normal' and
+            self.ids.rating_quality_3.state == 'normal' and
+            self.ids.rating_quality_4.state == 'normal') or
+            (self.ids.rating_visual_1.state == 'normal' and
+            self.ids.rating_visual_2.state == 'normal' and
+            self.ids.rating_visual_3.state == 'normal' and
+            self.ids.rating_visual_4.state == 'normal') or
+            (self.ids.rating_user_friendly_1.state == 'normal' and
+            self.ids.rating_user_friendly_2.state == 'normal' and
+            self.ids.rating_user_friendly_3.state == 'normal' and
+            self.ids.rating_user_friendly_4.state == 'normal') or
+            (self.ids.rating_functionality_1.state == 'normal' and
+            self.ids.rating_functionality_2.state == 'normal' and
+            self.ids.rating_functionality_3.state == 'normal' and
+            self.ids.rating_functionality_4.state == 'normal') or
+            (self.ids.improvement_size_1.state == 'normal' and
+            self.ids.improvement_size_2.state == 'normal' and
+            self.ids.improvement_size_3.state == 'normal') or
+            (self.ids.improvement_functionality_1.state == 'normal' and
+            self.ids.improvement_functionality_2.state == 'normal' and
+            self.ids.improvement_functionality_3.state == 'normal') or
+            (self.ids.improvement_quality_1.state == 'normal' and
+            self.ids.improvement_quality_2.state == 'normal' and
+            self.ids.improvement_quality_3.state == 'normal')
+        ):
+            show = Fail()
+            popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
+            popup_window.open()
+            return 0
+
+        show = Success()
+        popup_window = Popup(title='', content=show, size_hint=(0.30, 0.20))
+        popup_window.open()
+        return 1
 
 
 
