@@ -6,6 +6,9 @@
         id: scrollview
         do_scroll_x: False
         do_scroll_y: True
+        bar_color: 'black'
+        bar_inactive_color: 'gray'
+        bar_width: 5
         GridLayout:
             padding: 10
             spacing: 20
@@ -13,7 +16,7 @@
             size_hint_y: None
             height: 3000
             MDLabelCenter:
-                text: "Survey"
+                text: "Encuesta"
                 font_size: 50
                 halign: "center"
                 pos_hint: {"x":0, "y": 0.4}
@@ -25,7 +28,7 @@
                 MDLabelCenter:
                     text: '1. ¿Cómo calificaría su experiencia general con el servicio?'
                     font_size: 20
-                    halign: "center"
+                    halign: "left"
 
                 BoxLayout:
                     orientation: 'horizontal'
@@ -93,6 +96,7 @@
                     text:
                         '2. ¿Considera que nuestro sistema satisface sus necesidades?'
                     font_size: 20
+                    halign: "left"
 
                 BoxLayout:
                     orientation: 'horizontal'
@@ -144,8 +148,9 @@
                 orientation: 'vertical'
                 MDLabelCenter:
                     text:
-                        '3. ¿Como es la calidad de la información provista?'
+                        '3. ¿Cómo es la calidad de la información provista?'
                     font_size: 20
+                    halign: "left"
 
                 BoxLayout:
                     orientation: 'horizontal'
@@ -199,6 +204,7 @@
                     text:
                         '4. ¿Cuál es la probabilidad de que vuelva a utilizar nuestro sistema en el futuro?'
                     font_size: 20
+                    halign: "left"
 
                 BoxLayout:
                     orientation: 'horizontal'
@@ -251,6 +257,7 @@
                 MDLabelCenter:
                     text: '5. ¿Tiene algún comentario adicional para nosotros?'
                     font_size: 18
+                    halign: "left"
 
                 TextInput:
                     id: comments
@@ -265,6 +272,7 @@
                     text:
                         '6. ¿Cómo calificaría nuestro sistema en las siguientes áreas? '
                     font_size: 20
+                    halign: "left"
 
                 GridLayout:
                     cols: 5
@@ -376,8 +384,9 @@
 
                 MDLabelCenter:
                     text:
-                        '7. Por favor, marque de las áreas mencionadas cual le gustaría mejoraran.'
+                        '7. Marque de las áreas mencionadas cual le gustaría mejoraran.'
                     font_size: 18
+                    halign: "left"
 
                 GridLayout:
                     cols: 4
@@ -451,7 +460,7 @@
                 size_hint: .2, .25
 
             MDRaisedButton:
-                text: 'Submit'
+                text: 'Listo'
                 on_release:
                     if root.show_popup(): root.save_survey(); root.manager.SMMainScreen()
                 size_hint: .1, .2
