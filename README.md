@@ -22,9 +22,8 @@ python main.py
 
 👤 **Anthony Y. Encarnacion Torres**
 
-* Website: https://www.linkedin.com/in/anthonyencarnaciontorres/
 * Github: [@AntEncarnacion](https://github.com/AntEncarnacion)
-* LinkedIn: [@anthonyencarnaciontorres](https://linkedin.com/in/anthonyencarnaciontorres)
+* LinkedIn: https://linkedin.com/in/anthonyencarnaciontorres
 
 👤 **Hector A. Medina Torres**
 
