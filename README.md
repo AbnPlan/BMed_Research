@@ -23,11 +23,12 @@ python main.py
 👤 **Anthony Y. Encarnacion Torres**
 
 * Github: [@AntEncarnacion](https://github.com/AntEncarnacion)
-* LinkedIn: [@anthonyencarnaciontorres](https://linkedin.com/in/anthonyencarnaciontorres)
+* LinkedIn: https://linkedin.com/in/anthonyencarnaciontorres
 
-👤 **Hector Medina**
+👤 **Hector A. Medina Torres**
 
 * Github: [@AbnPlan](https://github.com/AbnPlan)
+* LinkedIn: https://www.linkedin.com/in/hector-a-medina-torres/
 
 ## Show your support
 
